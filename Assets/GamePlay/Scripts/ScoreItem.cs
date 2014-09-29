@@ -2,7 +2,7 @@
 using System.Collections;
 
 public enum ItemType{
-	Score,TensionUp,
+	Score,TensionUp,BonusItem,
 };
 
 public class ScoreItem : MonoBehaviour {
@@ -14,19 +14,27 @@ public class ScoreItem : MonoBehaviour {
 
 	public ItemType myType;
 
+	//ポイント追加イベント
 	public delegate void GetScoreItem(int point);
 	public event GetScoreItem GetScoreItemEvent;
+
+	//デストロイゾーンに入った時のイベント
+	public delegate void DestroyMe (int point);
+	public event DestroyMe DestroyEvent;
 
 	public void Init(){
 
 		this.GetScoreItemEvent += GUIScore.Instance.AddScore;
+		this.GetScoreItemEvent += ComboManager.Instance.AddCombo;
+		this.DestroyEvent += ComboManager.Instance.MissCombo;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		this.transform.Translate (-Vector3.up * FallSpeed * Time.deltaTime);
+		if(GameModel.isFreeze == false)
+			this.transform.Translate (-Vector3.up * FallSpeed * Time.deltaTime);
 
 	}
 
@@ -35,11 +43,12 @@ public class ScoreItem : MonoBehaviour {
 	/// </summary>
 	void End(){
 
-		int newPoint = (int)(TensionGauge.Instance.CurrentValue * point);
+		int newPoint = point;
 
 		GetScoreItemEvent (newPoint);
 
-		TensionGauge.Instance.GaugeChange (20.0f / 100.0f);
+		if(TensionGauge.Instance._isBonusTime == false)
+			TensionGauge.Instance.GaugeChange (20.0f / 100.0f);
 
 		Destroy (this.gameObject);
 	}
@@ -49,6 +58,7 @@ public class ScoreItem : MonoBehaviour {
 		switch (other.tag) {
 		case "DeathLine":
 			Destroy (this.gameObject);
+			DestroyEvent (point);
 			break;
 
 		case "Tentacls":

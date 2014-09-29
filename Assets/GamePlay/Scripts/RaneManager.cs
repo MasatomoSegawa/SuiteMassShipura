@@ -9,13 +9,26 @@ public class RaneManager : MonoBehaviour {
 	//ボーナスアイテムを生成するレーン
 	public BonusRane bonusRane;
 
+	public float BonusOkashiFallCoolTime = 0.3f;
 	public float OkashiFallCoolTime = 0.5f;
 	private float CurrentTime;
+	private float CurrentCoolTime;
 
 	void Start(){
 
 		//テンションゲージがMAX時にボーナスアイテムを生成する様に登録する
 		TensionGauge.Instance.MaxGaugeEvent += FallBonusItem;
+
+		//ボーナスタイム時のイベント登録
+		TensionGauge.Instance.BonusTimeStartEvent += () => {
+			this.CurrentCoolTime = BonusOkashiFallCoolTime;
+		};
+
+		TensionGauge.Instance.BonusTimeEndEvent += () => {
+			this.CurrentCoolTime = OkashiFallCoolTime;
+		};
+
+		this.CurrentCoolTime = OkashiFallCoolTime;
 
 	}
 	
@@ -26,7 +39,7 @@ public class RaneManager : MonoBehaviour {
 		if (GameModel.isFreeze == false) {
 
 			if (CurrentTime <= Time.time) {
-				CurrentTime = Time.time + OkashiFallCoolTime;
+				CurrentTime = Time.time + CurrentCoolTime;
 
 				this.FallRandomOkasi ();
 

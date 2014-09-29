@@ -14,7 +14,7 @@ public class ScoreItemFactory : Singleton<ScoreItemFactory> {
 	/// <param name="position">Position.</param>
 	public GameObject RandomInstantiate(Vector3 position){
 
-		if (Random.Range (1, 10) >= 7) {
+		if (Random.Range (1, 10) >= 7 && TensionGauge.Instance._isBonusTime == false) {
 			GameObject MusiClone = Instantiate (Mushi, position, Quaternion.identity) as GameObject;
 			MusiClone.GetComponent<Musi> ().Init ();
 
@@ -24,14 +24,18 @@ public class ScoreItemFactory : Singleton<ScoreItemFactory> {
 		GameObject clone = Instantiate(ScoreItem[Random.Range(0,ScoreItem.Length)],position,Quaternion.identity) as GameObject;
 		clone.GetComponent<ScoreItem> ().Init ();
 
-		clone.rigidbody2D.AddTorque (50.0f);
-
 		return clone;
 	}
 
+	/// <summary>
+	/// ボーナスアイテムを生成する
+	/// </summary>
+	/// <returns>The item instantiate.</returns>
+	/// <param name="position">Position.</param>
 	public GameObject BonusItemInstantiate(Vector3 position){
 
 		GameObject bonusItemClone = Instantiate (BonusItem, position, Quaternion.identity) as GameObject;
+		bonusItemClone.GetComponent<BonusItem> ().Init ();
 
 		return bonusItemClone;
 

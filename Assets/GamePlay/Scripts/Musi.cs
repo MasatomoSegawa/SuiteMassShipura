@@ -15,13 +15,15 @@ public class Musi : MonoBehaviour {
 	public void Init(){
 
 		this.GetMusiEvent += TensionGauge.Instance.GetMusi;
+		this.GetMusiEvent += ComboManager.Instance.MissCombo;
 
 	}
 
 	// Update is called once per frame
 	void Update () {
 
-		this.transform.Translate (-Vector3.up * FallSpeed * Time.deltaTime);
+		if(GameModel.isFreeze == false)
+			this.transform.Translate (-Vector3.up * FallSpeed * Time.deltaTime);
 
 	}
 
