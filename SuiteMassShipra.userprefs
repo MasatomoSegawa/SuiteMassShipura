@@ -1,17 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GamePlay/Scripts/ComboManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Result/ResultObjectManager.cs">
     <Files>
-      <File FileName="../../TeamC/Assets/GamePlay_BaseGameSystem/Scripts/Init.cs" Line="1" Column="1" />
-      <File FileName="Assets/GamePlay/Scripts/TensionGauge.cs" Line="1" Column="1" />
-      <File FileName="Assets/GamePlay/Scripts/ScoreItemFactory.cs" Line="1" Column="1" />
-      <File FileName="Assets/GamePlay/Scripts/Rane.cs" Line="1" Column="1" />
-      <File FileName="Assets/GamePlay/Scripts/RaneManager.cs" Line="29" Column="5" />
-      <File FileName="Assets/GamePlay/Scripts/BonusItem.cs" Line="18" Column="5" />
-      <File FileName="Assets/GamePlay/Scripts/StaminaGauge.cs" Line="49" Column="43" />
-      <File FileName="Assets/GamePlay/Scripts/ScoreItem.cs" Line="51" Column="55" />
-      <File FileName="Assets/GamePlay/Scripts/ComboManager.cs" Line="26" Column="20" />
-      <File FileName="Assets/GamePlay/Scripts/Musi.cs" Line="18" Column="1" />
+      <File FileName="Assets/Scenes/Result/ResultObjectManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/TestGamePlay.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Result/ResultManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/New Folder/BaseGamePack/Singleton/Singleton.cs" Line="1" Column="1" />
+      <File FileName="Assets/New Folder/BaseGamePack/Script/FadeManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Ranking/Ranking_BaseGameSystem/Script/RankingManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/KeyConfig/KeyConfigManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
