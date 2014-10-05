@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TestGamePlay.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TestInit.cs" />
      <Compile Include="Assets\Scenes\KeyConfig\KeyConfigManager.cs" />
+     <Compile Include="Assets\Scenes\NewTitle\Scripts\FadeButtonManager.cs" />
      <Compile Include="Assets\Scenes\Ranking\Ranking_BaseGameSystem\Script\RankingManager.cs" />
      <Compile Include="Assets\Scenes\Ranking\Ranking_BaseGameSystem\Script\RankingObject.cs" />
      <Compile Include="Assets\Scenes\Result\ResultManager.cs" />
@@ -85,8 +86,11 @@
      <Compile Include="Assets\Scenes\ShareObject\Script\ResultData.cs" />
      <Compile Include="Assets\Scenes\Title\Scripts\Button.cs" />
      <Compile Include="Assets\Scenes\Title\Scripts\ButtonManager.cs" />
+     <Compile Include="Assets\Scenes\Title\Scripts\OkashiSelector.cs" />
      <Compile Include="Assets\Scenes\Title\Scripts\ScrollManager.cs" />
+     <Compile Include="Assets\Scenes\Title\Scripts\TitleManager.cs" />
      <Compile Include="Assets\Scenes\Title\Scripts\Title_Logic.cs" />
+     <Compile Include="Assets\Scenes\test\UV.cs" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
