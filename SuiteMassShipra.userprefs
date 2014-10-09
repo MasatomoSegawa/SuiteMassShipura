@@ -2,12 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/GamePlay/Scripts/EtoriController.cs">
     <Files>
-      <File FileName="Assets/Scenes/GamePlay/Scripts/GUITimer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/GUIScore.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/EtoriController.cs" Line="155" Column="3" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/BonusItem.cs" Line="12" Column="46" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/TensionGauge.cs" Line="21" Column="4" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/Musi.cs" Line="18" Column="56" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/EtoriController.cs" Line="71" Column="50" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/TestInit.cs" Line="25" Column="17" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/StaminaGauge.cs" Line="76" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
