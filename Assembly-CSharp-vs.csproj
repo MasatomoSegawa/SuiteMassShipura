@@ -77,6 +77,7 @@
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Tentacls.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TestGamePlay.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TestInit.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\TuruController.cs" />
      <Compile Include="Assets\Scenes\KeyConfig\KeyConfigManager.cs" />
      <Compile Include="Assets\Scenes\NewTitle\Scripts\FadeButtonManager.cs" />
      <Compile Include="Assets\Scenes\Ranking\Ranking_BaseGameSystem\Script\RankingManager.cs" />
