@@ -99,7 +99,6 @@ public class SoundManager : Singleton<SoundManager>
 
 				foreach (AudioSource audiosource in SEsources) {
 					if (audiosource.isPlaying == false) {
-						Debug.Log ("uhun");
 						audiosource.clip = ss.clip;
 						audiosource.Play ();
 						return;
