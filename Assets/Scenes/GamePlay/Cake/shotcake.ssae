@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SpriteStudioAnimePack version="1.00.02">
+	<settings>
+		<fps>30</fps>
+		<frameCount>11</frameCount>
+		<sortMode>prio</sortMode>
+		<canvasSize>320 320</canvasSize>
+		<pivot>0 0</pivot>
+		<bgColor>FF323232</bgColor>
+		<gridSize>32</gridSize>
+		<gridColor>FF808080</gridColor>
+		<outStartNum>0</outStartNum>
+	</settings>
+	<name>shotcake</name>
+	<exportPath></exportPath>
+	<Model>
+		<partList>
+			<value>
+				<name>root</name>
+				<arrayIndex>0</arrayIndex>
+				<parentIndex>-1</parentIndex>
+				<type>null</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+				<expandAttribute>0</expandAttribute>
+				<expandChildren>1</expandChildren>
+			</value>
+			<value>
+				<name>cake</name>
+				<arrayIndex>1</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+				<expandAttribute>0</expandAttribute>
+				<expandChildren>1</expandChildren>
+			</value>
+			<value>
+				<name>ro-ruke-kisan</name>
+				<arrayIndex>2</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+				<expandAttribute>0</expandAttribute>
+				<expandChildren>1</expandChildren>
+			</value>
+			<value>
+				<name>ti-zu</name>
+				<arrayIndex>3</arrayIndex>
+				<parentIndex>0</parentIndex>
+				<type>normal</type>
+				<boundsType>none</boundsType>
+				<inheritType>parent</inheritType>
+				<ineheritRates>
+					<FLPH>0</FLPH>
+					<FLPV>0</FLPV>
+					<HIDE>0</HIDE>
+					<IFLH>0</IFLH>
+					<IFLV>0</IFLV>
+				</ineheritRates>
+				<alphaBlendType>mix</alphaBlendType>
+				<show>1</show>
+				<locked>0</locked>
+				<expandAttribute>0</expandAttribute>
+				<expandChildren>1</expandChildren>
+			</value>
+		</partList>
+	</Model>
+	<cellmapNames>
+		<value>cake.ssce</value>
+	</cellmapNames>
+	<animeList>
+		<anime>
+			<name>cheezucake</name>
+			<overrideSettings>1</overrideSettings>
+			<settings>
+				<fps>30</fps>
+				<frameCount>60</frameCount>
+				<sortMode>prio</sortMode>
+				<canvasSize>320 320</canvasSize>
+				<pivot>0 0</pivot>
+				<bgColor>FF323232</bgColor>
+				<gridSize>32</gridSize>
+				<gridColor>FF808080</gridColor>
+				<outStartNum>0</outStartNum>
+			</settings>
+			<labels />
+			<partAnimes>
+				<partAnime>
+					<partName>root</partName>
+					<attributes>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>ti-zu</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>ti-zu</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>0.5</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>0.5</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">0 0 -0.100000001490116 0.484375</curve>
+								<value>1</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">9.19999980926514 -0.03125 0 0</curve>
+								<value>0.620000004768372</value>
+							</key>
+							<key time="29" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.203125014901161</curve>
+								<value>0.394193559885025</value>
+							</key>
+							<key time="44" ipType="linear">
+								<value>0.241984084248543</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>0.04198407381773</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.484375</curve>
+								<value>1</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.1875</curve>
+								<value>0.620000004768372</value>
+							</key>
+							<key time="29" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.171875014901161</curve>
+								<value>0.394193559885025</value>
+							</key>
+							<key time="44" ipType="linear">
+								<value>0.241984084248543</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>0.04198407381773</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="51">
+								<value>0</value>
+							</key>
+							<key time="52">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+			</partAnimes>
+		</anime>
+		<anime>
+			<name>rollcake</name>
+			<overrideSettings>1</overrideSettings>
+			<settings>
+				<fps>30</fps>
+				<frameCount>60</frameCount>
+				<sortMode>prio</sortMode>
+				<canvasSize>320 320</canvasSize>
+				<pivot>0 0</pivot>
+				<bgColor>FF323232</bgColor>
+				<gridSize>32</gridSize>
+				<gridColor>FF808080</gridColor>
+				<outStartNum>0</outStartNum>
+			</settings>
+			<labels />
+			<partAnimes>
+				<partAnime>
+					<partName>root</partName>
+					<attributes>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>ro-ruke-kisan</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>ro-ruke-kisan</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>0.5</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>0.5</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.453125</curve>
+								<value>1</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">9.19999980926514 -0.03125 0 0</curve>
+								<value>0.620000004768372</value>
+							</key>
+							<key time="29" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.203125014901161</curve>
+								<value>0.394193559885025</value>
+							</key>
+							<key time="44" ipType="linear">
+								<value>0.241984084248543</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>0.04198407381773</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.5</curve>
+								<value>1</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.1875</curve>
+								<value>0.620000004768372</value>
+							</key>
+							<key time="29" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.171875014901161</curve>
+								<value>0.394193559885025</value>
+							</key>
+							<key time="44" ipType="linear">
+								<value>0.241984084248543</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>0.04198407381773</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="51">
+								<value>0</value>
+							</key>
+							<key time="52">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+			</partAnimes>
+		</anime>
+		<anime>
+			<name>shotcake</name>
+			<overrideSettings>1</overrideSettings>
+			<settings>
+				<fps>30</fps>
+				<frameCount>60</frameCount>
+				<sortMode>prio</sortMode>
+				<canvasSize>320 320</canvasSize>
+				<pivot>0 0</pivot>
+				<bgColor>FF323232</bgColor>
+				<gridSize>32</gridSize>
+				<gridColor>FF808080</gridColor>
+				<outStartNum>0</outStartNum>
+			</settings>
+			<labels />
+			<partAnimes>
+				<partAnime>
+					<partName>root</partName>
+					<attributes>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+				<partAnime>
+					<partName>cake</partName>
+					<attributes>
+						<attribute tag="CELL">
+							<key time="0">
+								<value>
+									<mapId>0</mapId>
+									<name>cake</name>
+								</value>
+							</key>
+						</attribute>
+						<attribute tag="POSX">
+							<key time="0" ipType="linear">
+								<value>0.5</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>0.5</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>0.5</value>
+							</key>
+						</attribute>
+						<attribute tag="POSY">
+							<key time="0" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>1</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>1</value>
+							</key>
+						</attribute>
+						<attribute tag="ROTZ">
+							<key time="0" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="21" ipType="linear">
+								<value>0</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>0</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLX">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.453125</curve>
+								<value>1</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">9.19999980926514 -0.03125 0 0</curve>
+								<value>0.620000004768372</value>
+							</key>
+							<key time="29" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.203125014901161</curve>
+								<value>0.394193559885025</value>
+							</key>
+							<key time="44" ipType="linear">
+								<value>0.241984084248543</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>0.04198407381773</value>
+							</key>
+						</attribute>
+						<attribute tag="SCLY">
+							<key time="0" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.453125</curve>
+								<value>1</value>
+							</key>
+							<key time="21" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.1875</curve>
+								<value>0.620000004768372</value>
+							</key>
+							<key time="29" ipType="bezier">
+								<curve syncStartEnd="0">0 0 0 0.171875014901161</curve>
+								<value>0.394193559885025</value>
+							</key>
+							<key time="44" ipType="linear">
+								<value>0.241984084248543</value>
+							</key>
+							<key time="51" ipType="linear">
+								<value>0.04198407381773</value>
+							</key>
+						</attribute>
+						<attribute tag="HIDE">
+							<key time="0">
+								<value>0</value>
+							</key>
+							<key time="21">
+								<value>0</value>
+							</key>
+							<key time="51">
+								<value>0</value>
+							</key>
+							<key time="52">
+								<value>0</value>
+							</key>
+						</attribute>
+					</attributes>
+				</partAnime>
+			</partAnimes>
+		</anime>
+	</animeList>
+</SpriteStudioAnimePack>

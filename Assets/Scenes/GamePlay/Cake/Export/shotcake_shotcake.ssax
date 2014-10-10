@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SpriteStudioMotion xmlns="http://www.webtech.co.jp/SpriteStudio/XML/Motion" version="4.00.02">
+	<!-- This data was created by OPTPiX SpriteStudio 5.3.0.5260 -->
+	<Header>
+		<EndFrame>59</EndFrame>
+		<BaseTickTime>30</BaseTickTime>
+		<OptionState>
+			<ScreenSize>
+				<CanvasWidth>320</CanvasWidth>
+				<CanvasHeight>320</CanvasHeight>
+				<MarginWidth>168</MarginWidth>
+				<MarginHeight>168</MarginHeight>
+			</ScreenSize>
+			<BgColor>0xFF323232</BgColor>
+			<hvFlipForImageOnly>1</hvFlipForImageOnly>
+		</OptionState>
+	</Header>
+	<ImageList>
+		<Image Id="1" Path="cake.png" Width="512" Height="1024" Bpp="32" />
+	</ImageList>
+	<Parts>
+		<Part Root="1">
+			<Type>1</Type>
+			<Name>root</Name>
+			<Attributes>
+				<Attribute Tag="HIDE">
+					<Key Time="0">
+						<Value>0</Value>
+					</Key>
+				</Attribute>
+			</Attributes>
+		</Part>
+		<Part>
+			<Type>0</Type>
+			<Name>cake</Name>
+			<ID>0</ID>
+			<ParentID>-1</ParentID>
+			<PicID>0</PicID>
+			<TransBlendType>0</TransBlendType>
+			<PictArea>
+				<Top>2</Top>
+				<Left>204</Left>
+				<Bottom>202</Bottom>
+				<Right>404</Right>
+			</PictArea>
+			<OriginX>100</OriginX>
+			<OriginY>100</OriginY>
+			<InheritType>0</InheritType>
+			<Attributes>
+				<Attribute Tag="POSX" Inherit="100">
+					<Key Time="0" CurveType="1">
+						<Value>0</Value>
+					</Key>
+					<Key Time="21" CurveType="1">
+						<Value>0</Value>
+					</Key>
+					<Key Time="51" CurveType="1">
+						<Value>0</Value>
+					</Key>
+				</Attribute>
+				<Attribute Tag="POSY" Inherit="100">
+					<Key Time="0" CurveType="1">
+						<Value>-1</Value>
+					</Key>
+					<Key Time="21" CurveType="1">
+						<Value>-1</Value>
+					</Key>
+					<Key Time="51" CurveType="1">
+						<Value>-1</Value>
+					</Key>
+				</Attribute>
+				<Attribute Tag="ANGL" Inherit="100">
+					<Key Time="0" CurveType="1">
+						<Value>0.000</Value>
+					</Key>
+					<Key Time="21" CurveType="1">
+						<Value>0.000</Value>
+					</Key>
+					<Key Time="51" CurveType="1">
+						<Value>0.000</Value>
+					</Key>
+				</Attribute>
+				<Attribute Tag="SCAX" Inherit="100">
+					<Key Time="0" CurveType="3" CurveStartT="0.000" CurveStartV="0.000" CurveEndT="0.000" CurveEndV="0.453">
+						<Value>1.000</Value>
+					</Key>
+					<Key Time="21" CurveType="3" CurveStartT="9.200" CurveStartV="-0.031" CurveEndT="0.000" CurveEndV="0.000">
+						<Value>0.620</Value>
+					</Key>
+					<Key Time="29" CurveType="3" CurveStartT="0.000" CurveStartV="0.000" CurveEndT="0.000" CurveEndV="0.203">
+						<Value>0.394</Value>
+					</Key>
+					<Key Time="44" CurveType="1">
+						<Value>0.242</Value>
+					</Key>
+					<Key Time="51" CurveType="1">
+						<Value>0.042</Value>
+					</Key>
+				</Attribute>
+				<Attribute Tag="SCAY" Inherit="100">
+					<Key Time="0" CurveType="3" CurveStartT="0.000" CurveStartV="0.000" CurveEndT="0.000" CurveEndV="0.453">
+						<Value>1.000</Value>
+					</Key>
+					<Key Time="21" CurveType="3" CurveStartT="0.000" CurveStartV="0.000" CurveEndT="0.000" CurveEndV="0.188">
+						<Value>0.620</Value>
+					</Key>
+					<Key Time="29" CurveType="3" CurveStartT="0.000" CurveStartV="0.000" CurveEndT="0.000" CurveEndV="0.172">
+						<Value>0.394</Value>
+					</Key>
+					<Key Time="44" CurveType="1">
+						<Value>0.242</Value>
+					</Key>
+					<Key Time="51" CurveType="1">
+						<Value>0.042</Value>
+					</Key>
+				</Attribute>
+				<Attribute Tag="HIDE">
+					<Key Time="0">
+						<Value>0</Value>
+					</Key>
+					<Key Time="21">
+						<Value>0</Value>
+					</Key>
+					<Key Time="51">
+						<Value>0</Value>
+					</Key>
+					<Key Time="52">
+						<Value>0</Value>
+					</Key>
+				</Attribute>
+			</Attributes>
+		</Part>
+		<Part>
+			<Type>3</Type>
+			<Name>ro-ruke-kisan</Name>
+			<ID>1</ID>
+			<ParentID>-1</ParentID>
+			<PicID>0</PicID>
+			<TransBlendType>0</TransBlendType>
+			<PictArea>
+				<Top>0</Top>
+				<Left>0</Left>
+				<Bottom>1</Bottom>
+				<Right>1</Right>
+			</PictArea>
+			<OriginX>0</OriginX>
+			<OriginY>0</OriginY>
+			<InheritType>0</InheritType>
+		</Part>
+		<Part>
+			<Type>3</Type>
+			<Name>ti-zu</Name>
+			<ID>2</ID>
+			<ParentID>-1</ParentID>
+			<PicID>0</PicID>
+			<TransBlendType>0</TransBlendType>
+			<PictArea>
+				<Top>0</Top>
+				<Left>0</Left>
+				<Bottom>1</Bottom>
+				<Right>1</Right>
+			</PictArea>
+			<OriginX>0</OriginX>
+			<OriginY>0</OriginY>
+			<InheritType>0</InheritType>
+		</Part>
+	</Parts>
+</SpriteStudioMotion>

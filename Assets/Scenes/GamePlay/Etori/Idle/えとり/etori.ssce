@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SpriteStudioCellMap version="1.00.01">
+	<name>etori</name>
+	<exportPath></exportPath>
+	<generator>TexturePacker</generator>
+	<packed>1</packed>
+	<imagePath>えとり/etori.png</imagePath>
+	<pixelSize>1024 1024</pixelSize>
+	<overrideTexSettings>0</overrideTexSettings>
+	<wrapMode>clamp</wrapMode>
+	<filterMode>linear</filterMode>
+	<imagePathAtImport>C:/Users/Junta/Documents/SpriteStudio/Ƃ/etori.png</imagePathAtImport>
+	<packInfoFilePath></packInfoFilePath>
+	<texPackSettings>
+		<maxSize>4096 4096</maxSize>
+		<forcePo2>1</forcePo2>
+		<forceSquare>0</forceSquare>
+		<margin>0</margin>
+		<padding>1</padding>
+	</texPackSettings>
+	<cells>
+		<cell>
+			<name>m4</name>
+			<pos>2 2</pos>
+			<size>14 13</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/m4.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>m3</name>
+			<pos>62 2</pos>
+			<size>20 13</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/m3.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>m1</name>
+			<pos>40 2</pos>
+			<size>20 7</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/m1.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>m2</name>
+			<pos>18 2</pos>
+			<size>20 13</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/m2.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>hiji_under</name>
+			<pos>112 2</pos>
+			<size>26 50</size>
+			<pivot>0.230769231915474 0.319999992847443</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/hiji_under.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>hand</name>
+			<pos>84 2</pos>
+			<size>26 31</size>
+			<pivot>0.15384615957737 0.241935476660728</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/hand.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>futomomo</name>
+			<pos>140 2</pos>
+			<size>34 86</size>
+			<pivot>0.0882352963089943 0.383720934391022</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/futomomo.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>neck</name>
+			<pos>264 2</pos>
+			<size>42 67</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/neck.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>foot</name>
+			<pos>176 2</pos>
+			<size>42 105</size>
+			<pivot>0 0.42380952835083</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/foot.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>tumasaki</name>
+			<pos>220 2</pos>
+			<size>42 74</size>
+			<pivot>-0.0714285746216774 -0.216216221451759</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/tumasaki.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>m5</name>
+			<pos>308 2</pos>
+			<size>44 36</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/m5.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>hair_side</name>
+			<pos>354 2</pos>
+			<size>51 263</size>
+			<pivot>-0.16666667163372 0.34030419588089</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/hair_side.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>ribon</name>
+			<pos>407 2</pos>
+			<size>60 40</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/ribon.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>sholder</name>
+			<pos>469 2</pos>
+			<size>62 95</size>
+			<pivot>0.338709682226181 0.342105269432068</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/sholder.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>m6</name>
+			<pos>533 2</pos>
+			<size>70 31</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/m6.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>belt</name>
+			<pos>605 2</pos>
+			<size>86 25</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/belt.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>bast</name>
+			<pos>693 2</pos>
+			<size>94 85</size>
+			<pivot>0 -0.464705884456635</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/bast.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>eye1</name>
+			<pos>789 2</pos>
+			<size>114 56</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/eye1.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>eye3</name>
+			<pos>270 267</pos>
+			<size>132 11</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/eye3.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>belt_ribon</name>
+			<pos>136 267</pos>
+			<size>132 70</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/belt_ribon.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>eye2</name>
+			<pos>2 267</pos>
+			<size>132 30</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/eye2.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>eye5</name>
+			<pos>404 267</pos>
+			<size>134 36</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/eye5.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>eye4</name>
+			<pos>540 267</pos>
+			<size>138 28</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/eye4.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>eye6</name>
+			<pos>680 267</pos>
+			<size>142 46</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/eye6.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>hair_front</name>
+			<pos>2 339</pos>
+			<size>210 165</size>
+			<pivot>0 0.366666674613953</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/hair_front.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>skirt</name>
+			<pos>214 339</pos>
+			<size>226 112</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/skirt.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>cheek</name>
+			<pos>442 339</pos>
+			<size>236 105</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/cheek.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>face</name>
+			<pos>680 339</pos>
+			<size>244 247</size>
+			<pivot>0 -0.475708514451981</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/face.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>furiru</name>
+			<pos>2 588</pos>
+			<size>256 34</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/furiru.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>hair_back</name>
+			<pos>260 588</pos>
+			<size>314 304</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/hair_back.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>hair_long</name>
+			<pos>576 588</pos>
+			<size>415 409</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/Ƃ/hair_long.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+	</cells>
+</SpriteStudioCellMap>

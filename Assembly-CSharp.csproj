@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scenes\GamePlay\Scripts\BonusItem.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\BonusRane.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\BonusTimeCutInEffect.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\CakeAnimation.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\ComboManager.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\EndGamePlay.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\EtoriController.cs" />

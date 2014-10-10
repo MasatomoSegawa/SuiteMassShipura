@@ -1,13 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/GamePlay/Scripts/EtoriController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/GamePlay/Scripts/CakeAnimation.cs">
     <Files>
-      <File FileName="Assets/Scenes/GamePlay/Scripts/EtoriController.cs" Line="297" Column="2" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/TestInit.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/StaminaGauge.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/ComboManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/TestGamePlay.cs" Line="42" Column="42" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/EndGamePlay.cs" Line="7" Column="22" />
+      <File FileName="Assets/Scenes/Title/Scripts/ButtonManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/New Folder/BaseGamePack/Singleton/SoundManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/Title/Scripts/Title_Logic.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/EtoriController.cs" Line="305" Column="3" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/CakeAnimation.cs" Line="11" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

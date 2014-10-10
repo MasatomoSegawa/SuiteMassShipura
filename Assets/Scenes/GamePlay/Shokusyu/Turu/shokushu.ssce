@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SpriteStudioCellMap version="1.00.01">
+	<name>shokushu</name>
+	<exportPath></exportPath>
+	<generator>TexturePacker</generator>
+	<packed>1</packed>
+	<imagePath>shokushu.png</imagePath>
+	<pixelSize>361 128</pixelSize>
+	<overrideTexSettings>0</overrideTexSettings>
+	<wrapMode>clamp</wrapMode>
+	<filterMode>linear</filterMode>
+	<imagePathAtImport>C:/Users/Junta/Documents/SpriteStudio/shokushu/shokushu.png</imagePathAtImport>
+	<packInfoFilePath></packInfoFilePath>
+	<texPackSettings>
+		<maxSize>4096 4096</maxSize>
+		<forcePo2>1</forcePo2>
+		<forceSquare>0</forceSquare>
+		<margin>0</margin>
+		<padding>1</padding>
+	</texPackSettings>
+	<cells>
+		<cell>
+			<name>1</name>
+			<pos>94 2</pos>
+			<size>71 46</size>
+			<pivot>-0.345070421695709 0.0869565233588219</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/1.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>2</name>
+			<pos>167 2</pos>
+			<size>59 38</size>
+			<pivot>-0.381355941295624 -0.184210523962975</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/2.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>3</name>
+			<pos>158 91</pos>
+			<size>46 35</size>
+			<pivot>-0.326086968183517 0.27142858505249</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/3.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>4</name>
+			<pos>142 50</pos>
+			<size>48 39</size>
+			<pivot>-0.354166656732559 -0.243589743971825</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/4.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>5</name>
+			<pos>94 50</pos>
+			<size>46 40</size>
+			<pivot>-0.326086968183517 0.224999994039536</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/5.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>6</name>
+			<pos>228 2</pos>
+			<size>58 37</size>
+			<pivot>-0.379310339689255 -0.202702701091766</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/6.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>7</name>
+			<pos>192 42</pos>
+			<size>58 38</size>
+			<pivot>-0.379310339689255 0.289473682641983</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/7.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>8</name>
+			<pos>206 82</pos>
+			<size>44 35</size>
+			<pivot>-0.386363625526428 -0.157142862677574</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/8.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>9</name>
+			<pos>288 2</pos>
+			<size>39 33</size>
+			<pivot>-0.371794879436493 0.287878781557083</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/9.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>91</name>
+			<pos>2 95</pos>
+			<size>40 31</size>
+			<pivot>-0.349999994039536 -0.112903222441673</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/91.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>92</name>
+			<pos>288 37</pos>
+			<size>36 33</size>
+			<pivot>-0.361111104488373 0.257575750350952</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/92.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>93</name>
+			<pos>326 38</pos>
+			<size>33 32</size>
+			<pivot>-0.318181812763214 -0.28125</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/93.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>94</name>
+			<pos>44 95</pos>
+			<size>39 28</size>
+			<pivot>-0.346153855323792 0.214285716414452</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/94.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>95</name>
+			<pos>94 92</pos>
+			<size>30 34</size>
+			<pivot>-0.333333343267441 -0.264705896377563</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/95.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>aaa</name>
+			<pos>126 92</pos>
+			<size>30 34</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/aaa.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>bbb</name>
+			<pos>329 2</pos>
+			<size>30 34</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/bbb.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>ddd</name>
+			<pos>252 41</pos>
+			<size>30 34</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/ddd.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>dfsg</name>
+			<pos>252 77</pos>
+			<size>30 34</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/dfsg.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>drfsd</name>
+			<pos>284 72</pos>
+			<size>30 34</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/drfsd.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>xczx</name>
+			<pos>316 72</pos>
+			<size>30 34</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/xczx.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>G1</name>
+			<pos>2 2</pos>
+			<size>90 91</size>
+			<pivot>-0.188888892531395 0.104395605623722</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Desktop/shokushu/G1.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+	</cells>
+</SpriteStudioCellMap>

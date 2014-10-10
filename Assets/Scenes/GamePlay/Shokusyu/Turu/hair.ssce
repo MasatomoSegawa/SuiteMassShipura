@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SpriteStudioCellMap version="1.00.01">
+	<name>hair</name>
+	<exportPath></exportPath>
+	<generator>TexturePacker</generator>
+	<packed>1</packed>
+	<imagePath>hair.png</imagePath>
+	<pixelSize>198 247</pixelSize>
+	<overrideTexSettings>0</overrideTexSettings>
+	<wrapMode>clamp</wrapMode>
+	<filterMode>linear</filterMode>
+	<imagePathAtImport>C:/Users/Junta/Documents/SpriteStudio/kami/hair.png</imagePathAtImport>
+	<packInfoFilePath></packInfoFilePath>
+	<texPackSettings>
+		<maxSize>4096 4096</maxSize>
+		<forcePo2>1</forcePo2>
+		<forceSquare>0</forceSquare>
+		<margin>0</margin>
+		<padding>1</padding>
+	</texPackSettings>
+	<cells>
+		<cell>
+			<name>aaa</name>
+			<pos>161 130</pos>
+			<size>26 42</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/kami/kamisozai/aaa.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>bbb</name>
+			<pos>161 174</pos>
+			<size>26 42</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/kami/kamisozai/bbb.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>E</name>
+			<pos>117 81</pos>
+			<size>21 102</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/kami/kamisozai/E.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>Et</name>
+			<pos>58 2</pos>
+			<size>57 176</size>
+			<pivot>0.219298243522644 -0.403409093618393</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/kami/kamisozai/Et.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name></name>
+			<pos>140 81</pos>
+			<size>19 99</size>
+			<pivot>0 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/kami/kamisozai/.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>t</name>
+			<pos>2 2</pos>
+			<size>54 182</size>
+			<pivot>-0.240740746259689 -0.384615391492844</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/kami/kamisozai/t.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>s1</name>
+			<pos>2 217</pos>
+			<size>129 28</size>
+			<pivot>-0.414728671312332 -0.0357142873108387</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/kami/kamisozai/s1.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>s2</name>
+			<pos>2 186</pos>
+			<size>118 29</size>
+			<pivot>-0.389830499887466 -0.0517241396009922</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/kami/kamisozai/s2.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>s3</name>
+			<pos>117 2</pos>
+			<size>79 77</size>
+			<pivot>-0.39873418211937 -0.318181812763214</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/kami/kamisozai/s3.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>s4</name>
+			<pos>161 81</pos>
+			<size>29 47</size>
+			<pivot>0.0862068980932236 -0.287234038114548</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/kami/kamisozai/s4.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>s5</name>
+			<pos>133 185</pos>
+			<size>26 42</size>
+			<pivot>-0.0384615398943424 -0.190476194024086</pivot>
+			<rotated>0</rotated>
+			<orgImageName>C:/Users/Junta/Documents/SpriteStudio/kami/kamisozai/s5.png</orgImageName>
+			<posStable>0</posStable>
+		</cell>
+	</cells>
+</SpriteStudioCellMap>
