@@ -14,6 +14,9 @@ public class ScoreItem : MonoBehaviour {
 
 	public ItemType myType;
 
+	public int GaugeAddNum = 1;
+	private float CalolyMultiply = 0.01f;
+
 	//ポイント追加イベント
 	public delegate void GetScoreItem(int point);
 	public event GetScoreItem GetScoreItemEvent;
@@ -49,8 +52,9 @@ public class ScoreItem : MonoBehaviour {
 
 		GetScoreItemEvent (newPoint);
 
-		if(TensionGauge.Instance._isBonusTime == false)
-			TensionGauge.Instance.GaugeChange (20);
+		if (TensionGauge.Instance._isBonusTime == false) {
+			TensionGauge.Instance.GaugeChange (point * CalolyMultiply);
+		}
 
 		Destroy (this.gameObject);
 	}
@@ -59,7 +63,7 @@ public class ScoreItem : MonoBehaviour {
 
 		switch (other.tag) {
 		case "DeathLine":
-			Destroy (this.gameObject);
+			Destroy (this.gameObject,0.1f);
 			DestroyEvent (point);
 			break;
 

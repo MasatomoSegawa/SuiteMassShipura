@@ -18,7 +18,9 @@ public class Musi : MonoBehaviour {
 
 		this.GetMusiEvent += TensionGauge.Instance.GetMusi;
 		this.GetMusiEvent += ComboManager.Instance.MissCombo;
-		this.GetMusiEvent += EtoriController.Instance.AnimEnter_GetHae;
+		this.GetMusiEvent += (int point) => {
+			EtoriController.Instance.GetComponent<Animator>().SetTrigger("GetHae");
+		};
 
 	}
 

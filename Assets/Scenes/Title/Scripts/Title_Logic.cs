@@ -14,12 +14,12 @@ public class Title_Logic : State
 			FBM.ChangeControl(1);
 			Debug.Log("Change Control");
 		};
-		GameObject.FindGameObjectWithTag("RankingButton").GetComponent<Button>().onInputDownEvent += () => {
-			FadeManager.Instance.LoadLevel("Ranking",1.0f);
+		/*GameObject.FindGameObjectWithTag("RankingButton").GetComponent<Button>().onInputDownEvent += () => {
+			Debug.Log("test");
 		};
 		GameObject.FindGameObjectWithTag("KeyConfigButton").GetComponent<Button>().onInputDownEvent += () => {
-			FadeManager.Instance.LoadLevel("KeyConfig",1.0f);
-		};
+			Debug.Log("test");
+		};*/
 		GameObject.FindGameObjectWithTag("EndButton").GetComponent<Button>().onInputDownEvent += () => {
 			Application.Quit();
 		};

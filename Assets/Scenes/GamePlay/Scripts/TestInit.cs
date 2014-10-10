@@ -3,7 +3,6 @@ using System.Collections;
 
 public class TestInit : State
 {
-
 	private GameObject StartEffect;
 
 	public override void StateStart ()
@@ -21,16 +20,19 @@ public class TestInit : State
 		///イベント登録
 		//スタミナゲージが０になった時
 		staminaGauge.GaugeZeroEvent += () => {
+
 			//触手１本しか出せなくする
-			etori.AllDeleateTentacls();
-			etori.ConstraintTentacls(1);
+			EtoriController.Instance.AllDeleateTentacls ();
+			EtoriController.Instance.ConstraintTentacls (1);
+
 		};
 
 		//スタミナゲージが回復した時
 		staminaGauge.HealEndEvent += () => {
 			//触手を全部扱えるようにする
-			etori.ConstraintTentacls(6);
+			etori.ConstraintTentacls (6);
 		};
+
 
 	}
 

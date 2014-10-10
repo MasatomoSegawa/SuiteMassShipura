@@ -34,6 +34,7 @@ public class TensionGauge : Singleton<TensionGauge>
 	public bool _isBonusTime {
 		get{ return isBonusTime; }
 	}
+
 	//ボーナスタイムの時間
 	public float BonusTimeDuration = 5.0f;
 
@@ -90,7 +91,8 @@ public class TensionGauge : Singleton<TensionGauge>
 	public void GetMusi (int point)
 	{
 
-		this.GaugeChange (-point);
+		if(this.isBonusTime == false)
+			this.GaugeChange (-point);
 
 	}
 

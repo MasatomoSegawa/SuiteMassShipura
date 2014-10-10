@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RaneManager : MonoBehaviour {
+public class RaneManager : Singleton<RaneManager> {
 
 	//お菓子を生成するレーン
 	public Rane[] Ranes;
@@ -30,8 +30,50 @@ public class RaneManager : MonoBehaviour {
 
 		this.CurrentCoolTime = OkashiFallCoolTime;
 
+		Level ();
+
 	}
-	
+
+	void Level(){
+
+		string diffStr = PlayerPrefs.GetString ("Current_Difficulty");
+		Difficulty difficulty;
+		float ItemsSpeed = 0.0f, MaxRandomizeSpeed = 0.0f, OkashiCoolTime = 0.0f;
+
+		switch (diffStr) {
+		case "Easy":
+			ItemsSpeed = 1.0f;
+			MaxRandomizeSpeed = 2.0f;
+			OkashiCoolTime = 0.4f;
+			break;
+
+		case "Normal":
+			ItemsSpeed = 1.5f;
+			MaxRandomizeSpeed = 3.0f;
+			OkashiCoolTime = 0.35f;
+			break;
+
+		case "Hard":
+			ItemsSpeed = 1.8f;
+			MaxRandomizeSpeed = 4.0f;
+			OkashiCoolTime = 0.3f;
+			break;
+
+		case "VeryHard":
+			ItemsSpeed = 2.0f;
+			MaxRandomizeSpeed = 5.0f;
+			OkashiCoolTime = 0.25f;
+			break;
+
+		default:
+			Debug.Log ("Error");
+			break;
+		}
+
+		this.OkashiFallCoolTime = OkashiCoolTime;
+
+	}
+
 	// Update is called once per frame
 	void Update () {
 

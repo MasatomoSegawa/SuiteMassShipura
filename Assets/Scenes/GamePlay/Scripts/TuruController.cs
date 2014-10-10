@@ -42,10 +42,14 @@ public class TuruController : MonoBehaviour {
 				switch (collision.tag) {
 				case "Musi":
 					collision.gameObject.GetComponent<Musi> ().End ();
+					this.myMecanimAnimator.SetTrigger ("StartEating");
+					SoundManager.Instance.PlaySE ("mogumogu");
 					break;
 
 				case "Okashi":
 					collision.gameObject.GetComponent<ScoreItem> ().End ();
+					this.myMecanimAnimator.SetTrigger ("StartEating");
+					SoundManager.Instance.PlaySE ("mogumogu");
 					break;
 
 				}
@@ -161,6 +165,8 @@ public class TuruController : MonoBehaviour {
 	/// お食事中のイベント
 	/// </summary>
 	public void AnimEnter_Eating(){
+
+		Debug.Log ("Eat");
 
 		this.myState = TuruState.Eating;
 

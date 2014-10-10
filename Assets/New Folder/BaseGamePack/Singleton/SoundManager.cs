@@ -12,7 +12,7 @@ public class SoundVolume
 	public float SE = 1.0f;
 	public bool BGM_Mute = false;
 	public bool SE_Mute = false;
-	
+
 	public void Init ()
 	{
 		BGM = 1.0f;
@@ -65,7 +65,7 @@ public class SoundManager : Singleton<SoundManager>
 
 	void Update ()
 	{
-	
+
 	}
 
 	public void StopBGM(string name){
@@ -85,6 +85,7 @@ public class SoundManager : Singleton<SoundManager>
 		foreach (SoundSource ss in BGMs) {
 			if (ss.Name.Equals (name) == true) {
 				BGMSource.clip = ss.clip;
+				BGMSource.volume = volume.BGM;
 				BGMSource.Play ();
 			}
 		}
@@ -100,6 +101,7 @@ public class SoundManager : Singleton<SoundManager>
 				foreach (AudioSource audiosource in SEsources) {
 					if (audiosource.isPlaying == false) {
 						audiosource.clip = ss.clip;
+						audiosource.volume = volume.SE;
 						audiosource.Play ();
 						return;
 					}
@@ -107,6 +109,6 @@ public class SoundManager : Singleton<SoundManager>
 			}
 		}
 	}
-	
+
 
 }

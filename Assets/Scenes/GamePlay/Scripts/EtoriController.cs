@@ -154,8 +154,6 @@ public class EtoriController : Singleton<EtoriController>
 
 		}
 
-		Debug.Log ("上げてる触手:" + _CurrentExistTentaclsNum + " 制限数:" + ConstraintTentaclsNum);
-
 		for (int i = 0; i < Turus.Length; i++) {
 
 			if (Input.GetKey (keycodes [i]) == true && _CurrentExistTentaclsNum < ConstraintTentaclsNum) {
@@ -213,6 +211,7 @@ public class EtoriController : Singleton<EtoriController>
 		this.myState = EtoriState.Idle;
 
 		this.mySSAnimator.Animation = this.SSAnimations [0];
+		this.mySSAnimator.PlayCount = 0;
 		this.mySSAnimator.Play ();
 
 	}
@@ -221,12 +220,13 @@ public class EtoriController : Singleton<EtoriController>
 	public void AnimEnter_GetHae (int point)
 	{
 
-		this.myMecanimAnimator.SetTrigger ("GetHae");
+		this.myMecanimAnimator.SetBool ("isGetHaeAnimationNow",true);
 		this.myState = EtoriState.GetHae;
 
 		this.mySSAnimator.Animation = this.SSAnimations [1];
 		this.mySSAnimator.AnimationFinished = (SsSprite sprite) => {
 			this.myMecanimAnimator.SetTrigger ("EndGetHaeAnimation");
+			this.myMecanimAnimator.SetBool ("isGetHaeAnimationNow",false);
 		};
 		this.mySSAnimator.PlayCount = 1;
 		this.mySSAnimator.Play ();

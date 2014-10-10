@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ResultObjectManager : MonoBehaviour {
+public class ResultObjectManager : Singleton<ResultObjectManager> {
 
 	public TextMesh ScoreNumberLabel;
 	public TextMesh MaximumChainNumebrLabel;
@@ -32,17 +32,33 @@ public class ResultObjectManager : MonoBehaviour {
 			difficulty = Difficulty.VeryHard;
 			break;
 		}
-
+			
 		Init (score, chain, difficulty);
 
 	}
 
 	public void Init(int ScoreNumber, int MaximumChainNumber, Difficulty difficulty){
-
+	
 		ScoreNumberLabel.text = System.String.Format ("{0:D9}", ScoreNumber);
 		MaximumChainNumebrLabel.text = MaximumChainNumber.ToString();
 		DiffuicultyLabel.text = difficulty.ToString ();
-		RankLabel.text = "AA";
+
+		string Rank;
+		if (0 <= ScoreNumber && ScoreNumber <= 1000) {
+			Rank = "D";
+		} else if (1000 < ScoreNumber && ScoreNumber <= 2000) {
+			Rank = "C";
+		} else if (2000 < ScoreNumber && ScoreNumber <= 3000) {
+			Rank = "B";
+		} else if (3000 < ScoreNumber && ScoreNumber <= 4000) {
+			Rank = "A";
+		} else if (4000 < ScoreNumber && ScoreNumber <= 5000) {
+			Rank = "AA";
+		} else {
+			Rank = "AAA";
+		}
+
+		RankLabel.text = Rank;
 
 	}
 

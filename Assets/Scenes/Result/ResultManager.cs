@@ -5,7 +5,9 @@ public class ResultManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
+		//		ResultObjectManager.Instance.Init ();
+
 	}
 	
 	// Update is called once per frame
