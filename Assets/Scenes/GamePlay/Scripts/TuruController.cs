@@ -85,7 +85,7 @@ public class TuruController : MonoBehaviour {
 	/// Openキーが押された時
 	/// </summary>
 	public void InputOpenKey(){
-
+	
 		this.myMecanimAnimator.SetBool ("isOpen",true);
 
 	}
@@ -94,6 +94,7 @@ public class TuruController : MonoBehaviour {
 	/// Openキーが押されていない時
 	/// </summary>
 	public void NotOpenKey(){
+
 
 		this.myMecanimAnimator.SetBool ("isOpen",false);
 
@@ -165,9 +166,7 @@ public class TuruController : MonoBehaviour {
 	/// お食事中のイベント
 	/// </summary>
 	public void AnimEnter_Eating(){
-
-		Debug.Log ("Eat");
-
+	
 		this.myState = TuruState.Eating;
 
 		this.mySSAnimator.Animation = this.SSAnimations [1];

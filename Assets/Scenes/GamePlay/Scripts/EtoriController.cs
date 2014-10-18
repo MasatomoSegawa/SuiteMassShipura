@@ -19,9 +19,6 @@ public class EtoriController : Singleton<EtoriController>
 	//えとりステート
 	public EtoriState myState;
 
-	//キャッチポイント
-	public GameObject CatchPoint;
-
 	//触手達
 	public TuruController[] Turus;
 
@@ -44,9 +41,6 @@ public class EtoriController : Singleton<EtoriController>
 	/// 8 - Clear
 	public SsAnimation[] SSAnimations;
 
-	//触手's
-	private GameObject[] Tentacles;
-
 	//キーコード
 	private KeyCode[] keycodes = { KeyCode.Z, KeyCode.X, KeyCode.C, 
 		KeyCode.LeftArrow,  KeyCode.DownArrow, KeyCode.RightArrow
@@ -66,7 +60,6 @@ public class EtoriController : Singleton<EtoriController>
 	void Start ()
 	{
 
-		this.Tentacles = new GameObject[keycodes.Length];
 		this.myMecanimAnimator = this.GetComponent<Animator> ();
 
 		this.myState = EtoriState.Idle;
@@ -90,6 +83,13 @@ public class EtoriController : Singleton<EtoriController>
 		if (GameModel.isFreeze == false) {
 			CheckKeyBoard ();
 			CatchCake ();
+
+			if (myState == EtoriState.Idle) {
+				this.myMecanimAnimator.SetBool ("isIdle", true);
+			} else {
+				this.myMecanimAnimator.SetBool ("isIdle", false);
+			}
+
 		}
 	
 	}
@@ -145,6 +145,17 @@ public class EtoriController : Singleton<EtoriController>
 	void CheckKeyBoard ()
 	{
 
+		bool isInputSpace;
+		//ケーキキャッチ
+		//今は判定のみ出す
+		if (Input.GetKey (KeyCode.Space)) {
+			isInputSpace = true;
+		} else {
+			isInputSpace = false;
+		}
+
+		this.myMecanimAnimator.SetBool ("InputSpace", isInputSpace);
+
 		_CurrentExistTentaclsNum = 0;
 		foreach (TuruController turu in Turus) {
 
@@ -154,10 +165,12 @@ public class EtoriController : Singleton<EtoriController>
 
 		}
 
+		int flag = 0;
 		for (int i = 0; i < Turus.Length; i++) {
 
-			if (Input.GetKey (keycodes [i]) == true && _CurrentExistTentaclsNum < ConstraintTentaclsNum) {
+			if (Input.GetKeyDown (keycodes [i]) == true  && ConstraintTentaclsNum > _CurrentExistTentaclsNum + flag) {
 				Turus [i].InputOpenKey ();
+				flag += 1;
 			}
 
 			if (Input.GetKeyUp (keycodes [i]) == true) {
@@ -166,17 +179,6 @@ public class EtoriController : Singleton<EtoriController>
 
 		}
 
-		bool isInputSpace;
-
-		//ケーキキャッチ
-		//今は判定のみ出す
-		if (Input.GetKey (KeyCode.Space)) {
-			isInputSpace = true;
-		} else {
-			isInputSpace = false;
-		}
-			
-		this.myMecanimAnimator.SetBool ("InputSpace", isInputSpace);
 	}
 
 	///////////////////////////////
@@ -191,6 +193,7 @@ public class EtoriController : Singleton<EtoriController>
 
 		//素材が無いのでスタブ
 		this.mySSAnimator.Animation = this.SSAnimations[7];
+		this.mySSAnimator.PlayCount = 0;
 		this.mySSAnimator.Play ();
 
 	}

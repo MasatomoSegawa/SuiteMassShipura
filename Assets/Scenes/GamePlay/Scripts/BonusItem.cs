@@ -19,7 +19,9 @@ public class BonusItem : MonoBehaviour {
 
 		this.GetBonusItemEvent += TensionGauge.Instance.StartBonusTime;
 		this.GetBonusItemEvent += EtoriController.Instance.AnimEnter_GetCake;
+		/*this.GetBonusItemEvent += () => {
 
+		};*/
 	}
 
 	// Update is called once per frame

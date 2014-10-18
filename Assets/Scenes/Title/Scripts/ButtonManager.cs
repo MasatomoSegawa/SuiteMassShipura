@@ -106,13 +106,13 @@ public class ButtonManager : MonoBehaviour {
 
 	void ControlInput(){
 
-		if (Input.GetKeyDown(KeyCode.W) && NextTime < Time.time) {
+		if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && NextTime < Time.time) {
 			ValueChanged (Direction.UP);
 
 			NextTime = Time.time + coolTime;
 		}
 
-		if (Input.GetKeyDown(KeyCode.S) && NextTime < Time.time){
+		if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && NextTime < Time.time){
 			ValueChanged (Direction.DOWN);
 
 			NextTime = Time.time + coolTime;
