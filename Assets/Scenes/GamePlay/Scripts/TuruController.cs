@@ -77,7 +77,8 @@ public class TuruController : MonoBehaviour {
 	/// </summary>
 	public void DestroyTuru(){
 
-		this.Init ();
+		this.myMecanimAnimator.SetBool ("isOpen",false);
+		this.myMecanimAnimator.SetTrigger ("DestoryTuru");
 
 	}
 
@@ -94,7 +95,6 @@ public class TuruController : MonoBehaviour {
 	/// Openキーが押されていない時
 	/// </summary>
 	public void NotOpenKey(){
-
 
 		this.myMecanimAnimator.SetBool ("isOpen",false);
 
