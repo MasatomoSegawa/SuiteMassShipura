@@ -62,7 +62,7 @@ public class ScoreItemFactory : Singleton<ScoreItemFactory> {
 	/// <param name="position">Position.</param>
 	public GameObject RandomInstantiate(Vector3 position){
 
-		if (Random.Range (1, 10) >= 7 && TensionGauge.Instance._isBonusTime == false) {
+		if (Random.Range (1, 10) >= 7) {
 			GameObject MusiClone = Instantiate (Mushi, position, Quaternion.identity) as GameObject;
 			MusiClone.GetComponent<Musi> ().Init (ItemSpeed + Random.Range(0.0f,MaxRandomizeSpeed));
 

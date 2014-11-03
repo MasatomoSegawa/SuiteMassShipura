@@ -28,7 +28,7 @@ public class ComboManager : Singleton<ComboManager> {
 		ReWriteText ();
 	}
 
-	public void MissCombo(int point){
+	public void MissCombo(){
 		CurrentCombo = 0;
 		ReWriteText ();
 	}

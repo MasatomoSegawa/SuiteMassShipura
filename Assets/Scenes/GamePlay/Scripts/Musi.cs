@@ -9,19 +9,20 @@ public class Musi : MonoBehaviour {
 	[Range(0.0f,100.0f)]
 	public int point;
 
-	public delegate void GetMusi(int point);
+	public delegate void GetMusi();
 	public event GetMusi GetMusiEvent;
 
 	public void Init(float FallSpeed){
 
 		this.FallSpeed = FallSpeed;
 
-		this.GetMusiEvent += TensionGauge.Instance.GetMusi;
+		///イベント登録
 		this.GetMusiEvent += ComboManager.Instance.MissCombo;
-		this.GetMusiEvent += (int point) => {
+		this.GetMusiEvent += () => {
 			EtoriController.Instance.GetComponent<Animator>().SetTrigger("GetHae");
 		};
-
+		this.GetMusiEvent += StaminaGauge.Instance.GetMusi;
+				
 	}
 
 	// Update is called once per frame
@@ -37,7 +38,7 @@ public class Musi : MonoBehaviour {
 	/// </summary>
 	public void End(){
 
-		GetMusiEvent (point);
+		GetMusiEvent ();
 
 		Destroy (this.gameObject);
 	}

@@ -22,16 +22,25 @@ public class ScoreItem : MonoBehaviour {
 	public event GetScoreItem GetScoreItemEvent;
 
 	//デストロイゾーンに入った時のイベント
-	public delegate void DestroyMe (int point);
+	public delegate void DestroyMe ();
 	public event DestroyMe DestroyEvent;
 
 	public void Init(float FallSpeed){
 
 		this.FallSpeed = FallSpeed;
 
+		///イベント登録
 		this.GetScoreItemEvent += GUIScore.Instance.AddScore;
 		this.GetScoreItemEvent += ComboManager.Instance.AddCombo;
 		this.DestroyEvent += ComboManager.Instance.MissCombo;
+
+		GetScoreItemEvent += (int point) => {
+			Debug.Log(point + "Get!");
+		};
+
+		DestroyEvent += () => {
+			Debug.Log(point + "Destroy");
+		};
 
 	}
 	
@@ -52,9 +61,11 @@ public class ScoreItem : MonoBehaviour {
 
 		GetScoreItemEvent (newPoint);
 
+		/*
 		if (TensionGauge.Instance._isBonusTime == false) {
 			TensionGauge.Instance.GaugeChange (point * CalolyMultiply);
 		}
+		*/
 
 		Destroy (this.gameObject);
 	}
@@ -64,7 +75,7 @@ public class ScoreItem : MonoBehaviour {
 		switch (other.tag) {
 		case "DeathLine":
 			Destroy (this.gameObject,0.1f);
-			DestroyEvent (point);
+			DestroyEvent ();
 			break;
 
 		case "Tentacls":

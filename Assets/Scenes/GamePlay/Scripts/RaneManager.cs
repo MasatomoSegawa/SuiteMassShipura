@@ -17,16 +17,16 @@ public class RaneManager : Singleton<RaneManager> {
 	void Start(){
 
 		//テンションゲージがMAX時にボーナスアイテムを生成する様に登録する
-		TensionGauge.Instance.MaxGaugeEvent += FallBonusItem;
+		//TensionGauge.Instance.MaxGaugeEvent += FallBonusItem;
 
 		//ボーナスタイム時のイベント登録
-		TensionGauge.Instance.BonusTimeStartEvent += () => {
+		/*TensionGauge.Instance.BonusTimeStartEvent += () => {
 			this.CurrentCoolTime = BonusOkashiFallCoolTime;
 		};
 
 		TensionGauge.Instance.BonusTimeEndEvent += () => {
 			this.CurrentCoolTime = OkashiFallCoolTime;
-		};
+		};*/
 
 		this.CurrentCoolTime = OkashiFallCoolTime;
 
@@ -39,6 +39,8 @@ public class RaneManager : Singleton<RaneManager> {
 		string diffStr = PlayerPrefs.GetString ("Current_Difficulty");
 		Difficulty difficulty;
 		float ItemsSpeed = 0.0f, MaxRandomizeSpeed = 0.0f, OkashiCoolTime = 0.0f;
+
+		diffStr = "Easy";
 
 		switch (diffStr) {
 		case "Easy":

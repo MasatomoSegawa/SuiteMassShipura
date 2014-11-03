@@ -8,7 +8,10 @@ public class TestGamePlay : State
 	{
 		Debug.Log (this.ToString () + " Start!");
 
-		GUITimer.Instance.EndTimeEvent += EndTime;
+		///イベント登録
+		// スタミナゲージが０になった時のイベント
+		StaminaGauge.Instance.GaugeZeroEvent += EndGame;
+
 
 		SoundManager.Instance.PlayBGM ("Play");
 	}
@@ -33,7 +36,7 @@ public class TestGamePlay : State
 	/// <summary>
 	/// 時間が０秒になった時に呼ばれるメソッド
 	/// </summary>
-	void EndTime(){
+	void EndGame(){
 
 		Debug.Log ("EndTime in Play");
 

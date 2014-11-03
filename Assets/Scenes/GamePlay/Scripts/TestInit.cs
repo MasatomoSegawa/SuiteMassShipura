@@ -12,28 +12,6 @@ public class TestInit : State
 
 		this.StartEffect = this.ResourceManagerInstance.InstantiateResourceWithName ("StartEffect");
 
-		//スタミナゲージ
-		StaminaGauge staminaGauge = GameObject.FindGameObjectWithTag ("StaminaGauge").GetComponent<StaminaGauge> ();
-		//えとりちゃん
-		EtoriController etori = GameObject.FindGameObjectWithTag ("Player").GetComponent<EtoriController> ();
-
-		///イベント登録
-		//スタミナゲージが０になった時
-		staminaGauge.GaugeZeroEvent += () => {
-
-			//触手１本しか出せなくする
-			EtoriController.Instance.AllDeleateTentacls ();
-			EtoriController.Instance.ConstraintTentacls (1);
-
-		};
-
-		//スタミナゲージが回復した時
-		staminaGauge.HealEndEvent += () => {
-			//触手を全部扱えるようにする
-			etori.ConstraintTentacls (6);
-		};
-
-
 	}
 
 	public override void StateUpdate ()
