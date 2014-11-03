@@ -133,7 +133,7 @@ public class EtoriController : Singleton<EtoriController>
 
 		foreach (TuruController turu in Turus) {
 
-			turu.Init ();
+			turu.DestroyTuru();
 
 		}
 
@@ -159,18 +159,18 @@ public class EtoriController : Singleton<EtoriController>
 		_CurrentExistTentaclsNum = 0;
 		foreach (TuruController turu in Turus) {
 
-			if (turu.myState == TuruState.Open || turu.myState == TuruState.OpenIdle) {
+			if (turu.myState == TuruState.Open || turu.myState == TuruState.OpenIdle || turu.myState == TuruState.Eating) {
 				_CurrentExistTentaclsNum += 1;
 			}
 
 		}
 
-		int flag = 0;
+		int cnt = 0;
 		for (int i = 0; i < Turus.Length; i++) {
-
-			if (Input.GetKeyDown (keycodes [i]) == true  && ConstraintTentaclsNum > _CurrentExistTentaclsNum + flag) {
+		
+			if (Input.GetKey (keycodes [i]) == true && Turus[i].myState == TuruState.Idle && ConstraintTentaclsNum > _CurrentExistTentaclsNum + cnt){
 				Turus [i].InputOpenKey ();
-				flag += 1;
+				cnt += 1;
 			}
 
 			if (Input.GetKeyUp (keycodes [i]) == true) {

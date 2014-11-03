@@ -2,7 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/GamePlay/Scripts/EtoriController.cs">
     <Files>
-      <File FileName="Assets/Scenes/GamePlay/Scripts/EtoriController.cs" Line="353" Column="2" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/EtoriController.cs" Line="172" Column="28" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/TuruController.cs" Line="82" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
