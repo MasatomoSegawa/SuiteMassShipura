@@ -6,6 +6,7 @@ public class ScoreItemFactory : Singleton<ScoreItemFactory> {
 	public GameObject[] ScoreItem;
 	public GameObject BonusItem;
 	public GameObject Mushi;
+	public GameObject BonusRaneObject;
 
 	// アイテムが落ちる速度
 	public float ItemSpeed;
@@ -13,6 +14,12 @@ public class ScoreItemFactory : Singleton<ScoreItemFactory> {
 	// ランダムに速度を付ける
 	[Range(0.0f, 10.0f)]
 	public float MaxRandomizeSpeed;
+
+	[Header("ボーナスアイテムが落ちてくる時間")]
+	public float BonusTimeDuration = 20.0f;
+
+	// 
+	private float BonusTimer = 0.0f;
 
 	void Start(){
 
@@ -52,6 +59,18 @@ public class ScoreItemFactory : Singleton<ScoreItemFactory> {
 
 		this.MaxRandomizeSpeed = MaxRandomize;
 		this.ItemSpeed = ItemSpeed;
+
+	}
+
+	void Update(){
+
+		if (BonusTimer >= BonusTimeDuration) {
+			BonusTimer = 0.0f;
+
+			BonusItemInstantiate (BonusRaneObject.transform.position);
+		} else {
+			BonusTimer += Time.deltaTime;
+		}
 
 	}
 

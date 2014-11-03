@@ -16,18 +16,6 @@ public class RaneManager : Singleton<RaneManager> {
 
 	void Start(){
 
-		//テンションゲージがMAX時にボーナスアイテムを生成する様に登録する
-		//TensionGauge.Instance.MaxGaugeEvent += FallBonusItem;
-
-		//ボーナスタイム時のイベント登録
-		/*TensionGauge.Instance.BonusTimeStartEvent += () => {
-			this.CurrentCoolTime = BonusOkashiFallCoolTime;
-		};
-
-		TensionGauge.Instance.BonusTimeEndEvent += () => {
-			this.CurrentCoolTime = OkashiFallCoolTime;
-		};*/
-
 		this.CurrentCoolTime = OkashiFallCoolTime;
 
 		Level ();
