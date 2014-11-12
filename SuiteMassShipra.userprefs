@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/GamePlay/Scripts/EtoriController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/GamePlay/Scripts/Effect.cs">
     <Files>
-      <File FileName="Assets/Scenes/GamePlay/Scripts/EtoriController.cs" Line="172" Column="28" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/TuruController.cs" Line="82" Column="3" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/TuruController.cs" Line="50" Column="6" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/EtoriController.cs" Line="293" Column="55" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/BonusItem.cs" Line="30" Column="2" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/Effect.cs" Line="13" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

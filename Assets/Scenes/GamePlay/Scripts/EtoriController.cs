@@ -68,15 +68,6 @@ public class EtoriController : Singleton<EtoriController>
 		this.mySSAnimator = this.GetComponent<SsSprite> ();
 		this.mySSAnimator.Animation = this.SSAnimations [0];
 
-		//イベント登録
-		//TensionGauge.Instance.BonusTimeEndEvent += AnimEnd_BonusTime;
-		/*
-		StaminaGauge.Instance.GaugeZeroEvent += () => {
-			this.myMecanimAnimator.SetTrigger("StaminaZero");
-		};
-		StaminaGauge.Instance.HealEndEvent += AnimEnd_StaminaZero;
-		*/
-
 	}
 	// Update is called once per frame
 	void Update ()
@@ -312,8 +303,6 @@ public class EtoriController : Singleton<EtoriController>
 	public void AnimEnter_BonusTime ()
 	{
 
-		Debug.Log ("test");
-	
 		this.myMecanimAnimator.SetBool ("isBonusTime", true);
 
 		this.myState = EtoriState.Bonus;

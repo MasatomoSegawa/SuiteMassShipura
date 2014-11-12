@@ -20,6 +20,8 @@ public class TuruController : MonoBehaviour {
 	//Mecanim用のアニメーター
 	Animator myMecanimAnimator;
 
+	public GameObject ItemGetEffect;
+
 	public TuruState myState;
 
 	public Transform Hantei;
@@ -50,6 +52,11 @@ public class TuruController : MonoBehaviour {
 					collision.gameObject.GetComponent<ScoreItem> ().End ();
 					this.myMecanimAnimator.SetTrigger ("StartEating");
 					SoundManager.Instance.PlaySE ("mogumogu");
+					GameObject clone = Instantiate (ItemGetEffect) as GameObject;
+					clone.transform.parent = this.transform;
+					Vector3 vec = this.transform.position;
+					vec.y += 2.5f;
+					clone.transform.position = vec;
 					break;
 
 				}
