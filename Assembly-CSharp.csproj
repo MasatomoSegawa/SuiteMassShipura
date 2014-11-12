@@ -76,7 +76,6 @@
      <Compile Include="Assets\Scenes\GamePlay\Scripts\ScoreItemFactory.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\StaminaGauge.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TensionGauge.cs" />
-     <Compile Include="Assets\Scenes\GamePlay\Scripts\Tentacls.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TestGamePlay.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TestInit.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TuruController.cs" />
