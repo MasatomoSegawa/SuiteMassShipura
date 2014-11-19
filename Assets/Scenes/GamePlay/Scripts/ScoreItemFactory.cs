@@ -64,12 +64,15 @@ public class ScoreItemFactory : Singleton<ScoreItemFactory> {
 
 	void Update(){
 
-		if (BonusTimer >= BonusTimeDuration) {
-			BonusTimer = 0.0f;
 
-			BonusItemInstantiate (BonusRaneObject.transform.position);
-		} else {
-			BonusTimer += Time.deltaTime;
+		if (GameModel.isFreeze == false) {
+			if (BonusTimer >= BonusTimeDuration) {
+				BonusTimer = 0.0f;
+
+				BonusItemInstantiate (BonusRaneObject.transform.position);
+			} else {
+				BonusTimer += Time.deltaTime;
+			}
 		}
 
 	}

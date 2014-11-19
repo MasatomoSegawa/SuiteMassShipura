@@ -1,13 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/GamePlay/Scripts/Rain.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/GamePlay/Scripts/Musi.cs">
     <Files>
       <File FileName="Assets/Scenes/GamePlay/Scripts/TuruController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scenes/GamePlay/Scripts/EtoriController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scenes/GamePlay/Scripts/Effect.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/WeatherManager.cs" Line="11" Column="2" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/Sunny.cs" Line="4" Column="31" />
-      <File FileName="Assets/Scenes/GamePlay/Scripts/Rain.cs" Line="11" Column="32" />
+      <File FileName="Assets/New Folder/BaseGamePack/Singleton/Singleton.cs" Line="13" Column="1" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/ScoreItem.cs" Line="35" Column="5" />
+      <File FileName="Assets/Scenes/GamePlay/Scripts/Musi.cs" Line="16" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

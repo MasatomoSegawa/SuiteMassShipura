@@ -92,6 +92,41 @@ public class SoundManager : Singleton<SoundManager>
 
 	}
 
+	public void StopSE(string name){
+
+
+		foreach (SoundSource ss in SEs) {
+			if (ss.Name.Equals (name) == true) {
+				foreach (AudioSource audiosource in SEsources) {
+					if (audiosource.clip == ss.clip) {
+						audiosource.Stop ();
+					}
+				}
+			}
+		}
+
+	}
+		
+	public void PlaySEWithSoundVolume (string name,float volume)
+	{
+
+		volume = Mathf.Clamp (volume, 0.0f, 1.0f);
+
+		foreach (SoundSource ss in SEs) {
+			if (ss.Name.Equals (name) == true) {
+
+				foreach (AudioSource audiosource in SEsources) {
+					if (audiosource.isPlaying == false) {
+						audiosource.clip = ss.clip;
+						audiosource.volume = volume;
+						audiosource.Play ();
+						return;
+					}
+				}
+			}
+		}
+	}
+
 	public void PlaySE (string name)
 	{
 
@@ -109,6 +144,5 @@ public class SoundManager : Singleton<SoundManager>
 			}
 		}
 	}
-
-
+		
 }

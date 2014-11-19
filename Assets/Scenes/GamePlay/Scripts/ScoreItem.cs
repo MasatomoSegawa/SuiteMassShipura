@@ -31,8 +31,8 @@ public class ScoreItem : MonoBehaviour {
 
 		///イベント登録
 		this.GetScoreItemEvent += GUIScore.Instance.AddScore;
-		this.GetScoreItemEvent += ComboManager.Instance.AddCombo;
-		this.DestroyEvent += ComboManager.Instance.MissCombo;
+		//this.GetScoreItemEvent += ComboManager.Instance.AddCombo;
+		//this.DestroyEvent += ComboManager.Instance.MissCombo;
 
 		GetScoreItemEvent += (int point) => {
 			Debug.Log(point + "Get!");

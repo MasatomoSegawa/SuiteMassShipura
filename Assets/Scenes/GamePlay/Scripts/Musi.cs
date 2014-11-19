@@ -17,7 +17,7 @@ public class Musi : MonoBehaviour {
 		this.FallSpeed = FallSpeed;
 
 		///イベント登録
-		this.GetMusiEvent += ComboManager.Instance.MissCombo;
+		//this.GetMusiEvent += ComboManager.Instance.MissCombo;
 		this.GetMusiEvent += () => {
 			EtoriController.Instance.GetComponent<Animator>().SetTrigger("GetHae");
 		};

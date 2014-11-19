@@ -5,7 +5,7 @@ public class Effect : MonoBehaviour {
 
 	void EndAnimation(){
 
-		if (this.transform.parent.gameObject != null) {
+		if (this.transform.parent != null) {
 			Destroy (this.transform.parent.gameObject);
 		} else {
 			Destroy (this.gameObject);
