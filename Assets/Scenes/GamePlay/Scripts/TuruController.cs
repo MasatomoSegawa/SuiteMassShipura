@@ -26,6 +26,9 @@ public class TuruController : MonoBehaviour {
 
 	public Transform Hantei;
 
+	// 開閉速度.
+	public float OpenSpeed = 1.0f;
+
 	void Start(){
 
 		Init ();
@@ -130,6 +133,7 @@ public class TuruController : MonoBehaviour {
 		this.myState = TuruState.Open;
 
 		this.mySSAnimator.Animation = this.SSAnimations [4];
+		this.mySSAnimator.Speed = this.OpenSpeed;
 		this.mySSAnimator.PlayCount = 1;
 		this.mySSAnimator.Play ();
 
@@ -147,6 +151,7 @@ public class TuruController : MonoBehaviour {
 		this.myState = TuruState.OpenIdle;
 
 		this.mySSAnimator.Animation = this.SSAnimations [3];
+		this.mySSAnimator.Speed = 1.0f;
 		this.mySSAnimator.PlayCount = 0;
 		this.mySSAnimator.Play ();
 
@@ -178,6 +183,7 @@ public class TuruController : MonoBehaviour {
 
 		this.mySSAnimator.Animation = this.SSAnimations [1];
 		this.mySSAnimator.PlayCount = 1;
+		this.mySSAnimator.Speed = 1.0f;
 		this.mySSAnimator.Play ();
 
 		this.mySSAnimator.AnimationFinished = (SsSprite sprite) => {
