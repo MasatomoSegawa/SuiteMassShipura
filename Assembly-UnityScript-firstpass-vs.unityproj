@@ -82,6 +82,7 @@
      <None Include="Assets\SpriteStudio\Shaders\_SsMixColorAddAlpha.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\New Folder\00_KY_FX pack2\prefab\01_shot\00_ReadMe.txt" />
      <None Include="Assets\SpriteStudio\Shaders\_SsMixColorSubAlphaMulMatCol.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsMixColorAddAlphaMulMatCol.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsAddColorAddAlpha.shader" />
@@ -102,6 +103,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MobileBloom.shader" />
      <None Include="Assets\SpriteStudio\Documents\Japanese\readme.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowCompose.shader" />
+     <None Include="Assets\New Folder\00_KY_FX pack2\ReadMe.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\SSAA.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\RadialBlur.shader" />
