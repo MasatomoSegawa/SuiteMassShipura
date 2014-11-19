@@ -20,7 +20,8 @@ public class Rain : Weather {
 
 	public override void WeatherOut ()
 	{
-		SoundManager.Instance.StopSE ("rainDrop");
+		if(SoundManager.Instance != null)
+			SoundManager.Instance.StopSE ("rainDrop");
 
 		foreach (GameObject turu in Turus) {
 			turu.GetComponent<TuruController> ().OpenSpeed = 1.0f;

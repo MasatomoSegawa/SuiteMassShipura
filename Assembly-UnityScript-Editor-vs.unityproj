@@ -199,6 +199,9 @@
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>/Users/masatomosegawa/Unity/SuiteMassShipra/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
+ <Reference Include="Assembly-UnityScript">
+ <HintPath>/Users/masatomosegawa/Unity/SuiteMassShipra/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
