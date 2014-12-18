@@ -5,6 +5,8 @@ public class Rain : Weather {
 
 	GameObject[] Turus;
 
+	public FXRain RainModel;
+
 	public override void WeatherIn ()
 	{
 		this.myWeather = WeatherState.Rain;
@@ -15,17 +17,33 @@ public class Rain : Weather {
 		foreach (GameObject turu in Turus) {
 			turu.GetComponent<TuruController> ().OpenSpeed = 2.0f;
 		}
+
+		EtoriController.Instance.AnimEnter_Rainy ();
+
+		this.RainModel.EndFadeOutEvent += () => {
+			this.EndFadeOut();
+		};
+
 	}
 
+	public override void WeatherFadeOut ()
+	{
+		this.RainModel.doFadeOut ();
+	}
 
 	public override void WeatherOut ()
 	{
-		if(SoundManager.Instance != null)
-			SoundManager.Instance.StopSE ("rainDrop");
 
+		//if(SoundManager.Instance != null)
+			//SoundManager.Instance.StopSE ("rainDrop");
+
+		/*
 		foreach (GameObject turu in Turus) {
-			turu.GetComponent<TuruController> ().OpenSpeed = 1.0f;
+			if(turu != null){
+				turu.GetComponent<TuruController> ().OpenSpeed = 1.0f;
+			}
 		}
+		*/
 	}
 
 }

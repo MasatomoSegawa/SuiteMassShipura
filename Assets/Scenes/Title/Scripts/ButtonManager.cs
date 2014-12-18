@@ -86,7 +86,7 @@ public class ButtonManager : MonoBehaviour {
 
 		SoundManager.Instance.PlaySE ("Select");
 
-		int newIndex, oldIndex = this.ControlIndex;
+		int newIndex = this.ControlIndex;
 
 		if (direction == Direction.DOWN) {
 			newIndex =  (ControlIndex + 1) % Buttons.Length;

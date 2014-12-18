@@ -42,7 +42,7 @@ public class TensionGauge : Singleton<TensionGauge>
 		get{ return _CurrentValue; }
 	}
 
-	float start = 0.0f;
+	//float start = 0.0f;
 
 	void Awake ()
 	{

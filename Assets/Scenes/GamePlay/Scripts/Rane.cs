@@ -10,5 +10,5 @@ public class Rane : MonoBehaviour {
 		ScoreItemFactory.Instance.RandomInstantiate (SpawnPoint.position);
 
 	}
-
+		
 }

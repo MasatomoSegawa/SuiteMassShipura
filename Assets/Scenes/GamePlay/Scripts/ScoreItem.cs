@@ -15,7 +15,7 @@ public class ScoreItem : MonoBehaviour {
 	public ItemType myType;
 
 	public int GaugeAddNum = 1;
-	private float CalolyMultiply = 0.01f;
+	//private float CalolyMultiply = 0.01f;
 
 	//ポイント追加イベント
 	public delegate void GetScoreItem(int point);
@@ -35,11 +35,11 @@ public class ScoreItem : MonoBehaviour {
 		//this.DestroyEvent += ComboManager.Instance.MissCombo;
 
 		GetScoreItemEvent += (int point) => {
-			Debug.Log(point + "Get!");
+			//Debug.Log(point + "Get!");
 		};
 
 		DestroyEvent += () => {
-			Debug.Log(point + "Destroy");
+			//Debug.Log(point + "Destroy");
 		};
 
 	}

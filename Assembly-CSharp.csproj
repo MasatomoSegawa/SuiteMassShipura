@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_5;UNITY_4_5;UNITY_64;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -58,40 +58,69 @@
      <Compile Include="Assets\New Folder\BaseGamePack\Singleton\Singleton.cs" />
      <Compile Include="Assets\New Folder\BaseGamePack\Singleton\SoundManager.cs" />
      <Compile Include="Assets\New Folder\BaseGamePack\Singleton\TestStateManager.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\Sample Supporting Emitters\DetonatorSprayHelper.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\Detonator.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorBurstEmitter.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorCloudRing.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorComponent.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorFireball.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorForce.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorGlow.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorHeatwave.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorLight.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorShockwave.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorSmoke.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorSound.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorSparks.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\System\DetonatorSpray.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
+     <Compile Include="Assets\New Folder\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
+     <Compile Include="Assets\New Folder\Elementals\Scripts\OrbitCamera.cs" />
+     <Compile Include="Assets\New Folder\Elementals\Scripts\TestParticles.cs" />
      <Compile Include="Assets\New Folder\Sky FX Pack\Scripts\LightBeamsControlScript.cs" />
      <Compile Include="Assets\New Folder\Sky FX Pack\Scripts\LookAtBehaviour.cs" />
      <Compile Include="Assets\New Folder\Sky FX Pack\Scripts\LookAtCameraBehaviour.cs" />
      <Compile Include="Assets\New Folder\Sky FX Pack\Scripts\RayBehavior.cs" />
      <Compile Include="Assets\New Folder\Sky FX Pack\Scripts\RotateBehaviour.cs" />
      <Compile Include="Assets\New Folder\Sky FX Pack\Scripts\ScrollBehaviour.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\BackGroundWeather.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\BonusItem.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\BonusRane.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\BonusTimeCutInEffect.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\CakeAnimation.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\Cloud.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\ComboManager.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Effect.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\EndGamePlay.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\EtoriController.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\FXRain.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\GUIScore.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\GUITimer.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Gauge.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\LevelLoader.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Musi.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Rain.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Rane.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\RaneManager.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\ScoreItem.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\ScoreItemFactory.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Snow.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\StaminaGauge.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\Storm.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Sunny.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TensionGauge.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TestGamePlay.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TestInit.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\Thunder.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\ThunderReceiver.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TuruController.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Weather.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\WeatherManager.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\collisionTest.cs" />
      <Compile Include="Assets\Scenes\KeyConfig\KeyConfigManager.cs" />
      <Compile Include="Assets\Scenes\NewTitle\Scripts\FadeButtonManager.cs" />
+     <Compile Include="Assets\Scenes\NewTitle\Scripts\TitleController.cs" />
      <Compile Include="Assets\Scenes\Ranking\Ranking_BaseGameSystem\Script\RankingManager.cs" />
      <Compile Include="Assets\Scenes\Ranking\Ranking_BaseGameSystem\Script\RankingObject.cs" />
      <Compile Include="Assets\Scenes\Result\ResultManager.cs" />
@@ -105,6 +134,7 @@
      <Compile Include="Assets\Scenes\Title\Scripts\Title_Logic.cs" />
      <Compile Include="Assets\Scenes\test\UV.cs" />
      <Compile Include="Assets\Scenes\test\hatoController.cs" />
+     <Compile Include="Assets\Scenes\test\test.cs" />
      <Compile Include="Assets\SpriteStudio\Runtime\SsAnimation.cs" />
      <Compile Include="Assets\SpriteStudio\Runtime\SsAssetDatabase.cs" />
      <Compile Include="Assets\SpriteStudio\Runtime\SsDefines.cs" />
@@ -119,11 +149,6 @@
      <Compile Include="Assets\SpriteStudio\Runtime\SsSprite.cs" />
      <Compile Include="Assets\SpriteStudio\Runtime\SsStructs.cs" />
      <Compile Include="Assets\SpriteStudio\Runtime\SsUtilities.cs" />
-     <Compile Include="Assets\SpriteStudio\Samples\ChangeAttrByScript\ChangeAttrByScript.cs" />
-     <Compile Include="Assets\SpriteStudio\Samples\PartialPlay\PartialPlay.cs" />
-     <Compile Include="Assets\SpriteStudio\Samples\SsButtonBehaviour.cs" />
-     <Compile Include="Assets\SpriteStudio\Samples\SsCommandedComipoChan.cs" />
-     <Compile Include="Assets\SpriteStudio\Samples\SsGameTest.cs" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsSubColorMixAlpha.shader" />
@@ -160,7 +185,6 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\SSAA.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\RadialBlur.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsSubColorMixAlphaMulMatCol.shader" />
-     <None Include="Assets\SpriteStudio\Samples\PartialPlay\PartialPlay.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsNonColorMixAlphaMulMatCol.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsNonColorSubAlpha.shader" />
@@ -199,6 +223,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\SpriteStudio\Shaders\SsUnifiedShaderTemplate.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
+     <None Include="Assets\New Folder\Elementals\!Readme.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsNonColorMixAlpha.shader" />
      <None Include="Assets\SpriteStudio\Documents\English\sample.txt" />
@@ -240,6 +265,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsSubColorMulAlphaMulMatCol.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrection3DLut.shader" />
+     <None Include="Assets\New Folder\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\SpriteStudio\readme.txt" />
      <None Include="Assets\SpriteStudio\Shaders\_SsMixColorNonAlphaMulMatCol.shader" />
@@ -254,7 +280,6 @@
      <None Include="Assets\SpriteStudio\Shaders\_SsMulColorMulAlphaMulMatCol.shader" />
      <None Include="Assets\SpriteStudio\Documents\English\usage.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
-     <None Include="Assets\SpriteStudio\Samples\TagsAndLayers!!CAUTION!!.txt" />
      <None Include="Assets\SpriteStudio\Shaders\_SsMulColorAddAlpha.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsSubColorAddAlphaMulMatCol.shader" />
      <None Include="Assets\SpriteStudio\Shaders\SsCgShaderTemplate.txt" />
@@ -263,6 +288,9 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsNonColorNonAlphaMulMatCol.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

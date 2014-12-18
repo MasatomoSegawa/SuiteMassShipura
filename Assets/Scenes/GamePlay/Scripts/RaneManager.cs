@@ -9,6 +9,9 @@ public class RaneManager : Singleton<RaneManager> {
 	//ボーナスアイテムを生成するレーン
 	public BonusRane bonusRane;
 
+	//雷
+	public GameObject Thunder;
+
 	public float BonusOkashiFallCoolTime = 0.3f;
 	public float OkashiFallCoolTime = 0.5f;
 	private float CurrentTime;
@@ -24,6 +27,7 @@ public class RaneManager : Singleton<RaneManager> {
 
 	void Level(){
 
+		/*
 		string diffStr = PlayerPrefs.GetString ("Current_Difficulty");
 		Difficulty difficulty;
 		float ItemsSpeed = 0.0f, MaxRandomizeSpeed = 0.0f, OkashiCoolTime = 0.0f;
@@ -61,20 +65,24 @@ public class RaneManager : Singleton<RaneManager> {
 		}
 
 		this.OkashiFallCoolTime = OkashiCoolTime;
+	*/
+
+	}
+
+	void LevelChange(){
+	
 
 	}
 
 	// Update is called once per frame
 	void Update () {
-
+	
 		//お菓子アイテムをランダムに落とす
 		if (GameModel.isFreeze == false) {
 
 			if (CurrentTime <= Time.time) {
 				CurrentTime = Time.time + CurrentCoolTime;
-
 				this.FallRandomOkasi ();
-
 			}
 
 		}

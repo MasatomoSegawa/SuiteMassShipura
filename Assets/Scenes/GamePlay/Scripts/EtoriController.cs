@@ -15,21 +15,18 @@ public enum EtoriState
 
 public class EtoriController : Singleton<EtoriController>
 {
-
 	//えとりステート
 	public EtoriState myState;
-
 	//触手達
 	public TuruController[] Turus;
-
 	//判定
 	public Transform Hantei;
-
 	//メカニムのステート管理用アニメーター
 	private Animator myMecanimAnimator;
 	//SpriteStudio用のアニメーター
 	SsSprite mySSAnimator;
-	//SpriteStudio用のアニメーション
+
+	//Sunny用のアニメーション
 	/// 0 - Idle
 	/// 1 - getHae
 	/// 2 - bonus
@@ -39,23 +36,40 @@ public class EtoriController : Singleton<EtoriController>
 	/// 6 - CatchCakeIdle
 	/// 7 - StaminaZero
 	/// 8 - Clear
-	public SsAnimation[] SSAnimations;
+	public SsAnimation[] SunnySSAnimations;
+
+	//Rainy用のアニメーション
+	/// 0 - sunny to rainy
+	/// 1 - Idle
+	public SsAnimation[] RainySSAnimations;
+
+	//Snow用のアニメーション
+	/// 0 - sunny to rainy
+	/// 1 - Idle
+	public SsAnimation[] SnowySSAnimations;
+
+	//Storm用のアニメーション
+	/// 0 - sunny to rainy
+	/// 1 - Idle
+	public SsAnimation[] StormSSAnimations;
+
+	//Thunder用のアニメーション
+	/// 0 - sunny to rainy
+	/// 1 - Idle
+	public SsAnimation[] ThunderSSAnimations;
 
 	//キーコード
 	private KeyCode[] keycodes = { KeyCode.Z, KeyCode.X, KeyCode.C, 
 		KeyCode.LeftArrow,  KeyCode.DownArrow, KeyCode.RightArrow
 	};
-
 	//現在の出せる触手の最大数
 	private int ConstraintTentaclsNum = 6;
-
 	//現在出している触手の数
 	private int _CurrentExistTentaclsNum = 0;
 
 	public int CurrentExistTentaclsNum {
 		get{ return _CurrentExistTentaclsNum; }
 	}
-
 	// Use this for initialization
 	void Start ()
 	{
@@ -66,7 +80,7 @@ public class EtoriController : Singleton<EtoriController>
 
 		//SpriteStudio
 		this.mySSAnimator = this.GetComponent<SsSprite> ();
-		this.mySSAnimator.Animation = this.SSAnimations [0];
+		this.mySSAnimator.Animation = this.SunnySSAnimations [0];
 
 	}
 	// Update is called once per frame
@@ -87,11 +101,12 @@ public class EtoriController : Singleton<EtoriController>
 	
 	}
 
-	void CatchCake(){
+	void CatchCake ()
+	{
 
 		if (myState == EtoriState.CatchCakeIn || myState == EtoriState.CatchCakeIdle) {
 
-			Collider2D collision = Physics2D.OverlapCircle (Hantei.position,0.5f);
+			Collider2D collision = Physics2D.OverlapCircle (Hantei.position, 0.5f);
 
 			if (collision) {
 
@@ -126,7 +141,7 @@ public class EtoriController : Singleton<EtoriController>
 
 		foreach (TuruController turu in Turus) {
 
-			turu.DestroyTuru();
+			turu.DestroyTuru ();
 
 		}
 
@@ -161,7 +176,7 @@ public class EtoriController : Singleton<EtoriController>
 		int cnt = 0;
 		for (int i = 0; i < Turus.Length; i++) {
 		
-			if (Input.GetKey (keycodes [i]) == true && Turus[i].myState == TuruState.Idle && ConstraintTentaclsNum > _CurrentExistTentaclsNum + cnt){
+			if (Input.GetKey (keycodes [i]) == true && Turus [i].myState == TuruState.Idle && ConstraintTentaclsNum > _CurrentExistTentaclsNum + cnt) {
 				Turus [i].InputOpenKey ();
 				cnt += 1;
 			}
@@ -185,12 +200,11 @@ public class EtoriController : Singleton<EtoriController>
 		this.myState = EtoriState.StaminaZero;
 
 		//素材が無いのでスタブ
-		this.mySSAnimator.Animation = this.SSAnimations[7];
+		this.mySSAnimator.Animation = this.SunnySSAnimations [7];
 		this.mySSAnimator.PlayCount = 0;
 		this.mySSAnimator.Play ();
 
 	}
-
 	//スタミナ０状態が終了時のイベント
 	public void AnimEnd_StaminaZero ()
 	{
@@ -199,30 +213,49 @@ public class EtoriController : Singleton<EtoriController>
 		this.myMecanimAnimator.SetTrigger ("EndStaminaZero");
 
 	}
-
 	//Idle状態のイベント
 	void AnimEnter_Idle ()
 	{
 
 		this.myState = EtoriState.Idle;
 
-		this.mySSAnimator.Animation = this.SSAnimations [0];
+		switch (WeatherManager.Instance.CurrentWeatherState) {
+		case WeatherState.Sunny:
+			this.mySSAnimator.Animation = this.SunnySSAnimations [0];
+			break;
+
+		case WeatherState.Rain:
+			this.mySSAnimator.Animation = this.RainySSAnimations [1];
+			break;
+
+		case WeatherState.Snow:
+			this.mySSAnimator.Animation = this.SnowySSAnimations [1];
+			break;
+
+		case WeatherState.Storm:
+			this.mySSAnimator.Animation = this.StormSSAnimations [1];
+			break;
+
+		case WeatherState.Thunder:
+			this.mySSAnimator.Animation = this.ThunderSSAnimations [1];
+			break;
+		}
+			
 		this.mySSAnimator.PlayCount = 0;
 		this.mySSAnimator.Play ();
 
 	}
-
 	//ハエを食べた時のイベント
 	public void AnimEnter_GetHae (int point)
 	{
 
-		this.myMecanimAnimator.SetBool ("isGetHaeAnimationNow",true);
+		this.myMecanimAnimator.SetBool ("isGetHaeAnimationNow", true);
 		this.myState = EtoriState.GetHae;
 
-		this.mySSAnimator.Animation = this.SSAnimations [1];
+		this.mySSAnimator.Animation = this.SunnySSAnimations [1];
 		this.mySSAnimator.AnimationFinished = (SsSprite sprite) => {
 			this.myMecanimAnimator.SetTrigger ("EndGetHaeAnimation");
-			this.myMecanimAnimator.SetBool ("isGetHaeAnimationNow",false);
+			this.myMecanimAnimator.SetBool ("isGetHaeAnimationNow", false);
 		};
 		this.mySSAnimator.PlayCount = 1;
 		this.mySSAnimator.Play ();
@@ -248,7 +281,7 @@ public class EtoriController : Singleton<EtoriController>
 
 		this.myState = EtoriState.CakeEat;
 
-		this.mySSAnimator.Animation = this.SSAnimations [5];
+		this.mySSAnimator.Animation = this.SunnySSAnimations [5];
 		this.mySSAnimator.PlayCount = 1;
 		this.mySSAnimator.AnimationFinished = (SsSprite sprite) => {
 			this.myMecanimAnimator.SetTrigger ("EndEatCakeAnimation");
@@ -263,7 +296,7 @@ public class EtoriController : Singleton<EtoriController>
 
 		this.myState = EtoriState.CatchCakeIn;
 	
-		this.mySSAnimator.Animation = this.SSAnimations [3];
+		this.mySSAnimator.Animation = this.SunnySSAnimations [3];
 		this.mySSAnimator.PlayCount = 1;
 		this.mySSAnimator.AnimationFinished = (SsSprite sprite) => {
 			this.myMecanimAnimator.SetTrigger ("EndCatchCakeInAnimation");
@@ -278,7 +311,7 @@ public class EtoriController : Singleton<EtoriController>
 
 		this.myState = EtoriState.CatchCakeIdle;
 
-		this.mySSAnimator.Animation = this.SSAnimations [6];
+		this.mySSAnimator.Animation = this.SunnySSAnimations [6];
 		this.mySSAnimator.PlayCount = 0;
 		this.mySSAnimator.Play ();
 
@@ -290,7 +323,7 @@ public class EtoriController : Singleton<EtoriController>
 
 		this.myState = EtoriState.CatchCakeOut;
 
-		this.mySSAnimator.Animation = this.SSAnimations [4];
+		this.mySSAnimator.Animation = this.SunnySSAnimations [4];
 		this.mySSAnimator.PlayCount = 1;
 		this.mySSAnimator.AnimationFinished = (SsSprite sprite) => {
 			this.myMecanimAnimator.SetTrigger ("EndCatchCakeOutAnimation");
@@ -307,7 +340,7 @@ public class EtoriController : Singleton<EtoriController>
 
 		this.myState = EtoriState.Bonus;
 
-		this.mySSAnimator.Animation = this.SSAnimations [2];
+		this.mySSAnimator.Animation = this.SunnySSAnimations [2];
 		this.mySSAnimator.PlayCount = 0;
 		this.mySSAnimator.Play ();
 
@@ -325,14 +358,136 @@ public class EtoriController : Singleton<EtoriController>
 	}
 
 	//クリア時のイベント
-	public void AnimEnter_Clear(){
+	public void AnimEnter_Clear ()
+	{
 
 		this.myState = EtoriState.Bonus;
 
-		this.mySSAnimator.Animation = this.SSAnimations[8];
+		this.mySSAnimator.Animation = this.SunnySSAnimations [8];
 		this.mySSAnimator.PlayCount = 1;
 		this.mySSAnimator.AnimationFinished = (SsSprite sprite) => {
 			FadeManager.Instance.LoadLevel ("Result", 1.0f);
+		};
+		this.mySSAnimator.Play ();
+
+	}
+
+	// Sunnyに移行時のイベント.
+	public void AnimEnter_Sunny (WeatherState weatherState)
+	{
+
+		this.myMecanimAnimator.SetTrigger ("ChangeWeather");
+		Debug.Log ("AnimEnter_Sunny: OldWeather->:" + weatherState);
+
+		switch (weatherState) {
+		/*
+		case WeatherState.Sunny:
+			this.mySSAnimator.Animation = this.SunnySSAnimations [0];
+			this.myState = EtoriState.Idle;
+			this.mySSAnimator.PlayCount = 1;
+			this.mySSAnimator.AnimationFinished = (SsSprite Sprite) => {
+				this.myMecanimAnimator.SetTrigger("ChangeWeatherEnd");
+			};
+			break;
+		*/
+
+		case WeatherState.Storm:
+			this.mySSAnimator.Animation = this.RainySSAnimations [0];
+			this.myState = EtoriState.Idle;
+			this.mySSAnimator.PlayCount = 1;
+			this.mySSAnimator.PlayDirection = SsAnimePlayDirection.Reverse;
+			this.mySSAnimator.AnimationFinished = (SsSprite Sprite) => {
+				this.myMecanimAnimator.SetTrigger("ChangeWeatherEnd");
+				this.mySSAnimator.PlayDirection = SsAnimePlayDirection.Forward;
+			};
+			this.mySSAnimator.Play ();
+			break;
+
+		case WeatherState.Thunder:
+			this.mySSAnimator.Animation = this.ThunderSSAnimations [0];
+			this.myState = EtoriState.Idle;
+			this.mySSAnimator.PlayCount = 1;
+			this.mySSAnimator.PlayDirection = SsAnimePlayDirection.Reverse;
+			this.mySSAnimator.AnimationFinished = (SsSprite Sprite) => {
+				this.myMecanimAnimator.SetTrigger ("ChangeWeatherEnd");
+				this.mySSAnimator.PlayDirection = SsAnimePlayDirection.Forward;
+			};
+			this.mySSAnimator.Play ();
+			break;
+
+		case WeatherState.Snow:
+			this.mySSAnimator.Animation = this.SnowySSAnimations [0];
+			this.myState = EtoriState.Idle;
+			this.mySSAnimator.PlayCount = 1;
+			this.mySSAnimator.PlayDirection = SsAnimePlayDirection.Reverse;
+			this.mySSAnimator.AnimationFinished = (SsSprite Sprite) => {
+				this.myMecanimAnimator.SetTrigger ("ChangeWeatherEnd");
+				this.mySSAnimator.PlayDirection = SsAnimePlayDirection.Forward;
+			};
+			this.mySSAnimator.Play ();
+			break;
+
+		}
+
+	}
+
+	public void AnimEnter_Stormy(){
+
+		this.myMecanimAnimator.SetTrigger ("ChangeWeather");
+		this.myState = EtoriState.Idle;
+
+		Debug.Log ("AnimEnter_Stormy");
+
+		this.mySSAnimator.Animation = this.StormSSAnimations [0];
+		this.mySSAnimator.PlayCount = 1;
+		this.mySSAnimator.AnimationFinished = (SsSprite Sprite) => {
+			this.myMecanimAnimator.SetTrigger("ChangeWeatherEnd");
+		};
+		this.mySSAnimator.Play ();
+
+	}
+
+	public void AnimEnter_Thunder(){
+
+		this.myMecanimAnimator.SetTrigger ("ChangeWeather");
+		this.myState = EtoriState.Idle;
+
+		Debug.Log ("AnimEnter_Thunder");
+
+		this.mySSAnimator.Animation = this.ThunderSSAnimations [0];
+		this.mySSAnimator.PlayCount = 1;
+		this.mySSAnimator.AnimationFinished = (SsSprite Sprite) => {
+			this.myMecanimAnimator.SetTrigger("ChangeWeatherEnd");
+		};
+		this.mySSAnimator.Play ();
+
+	}
+
+	// Rainyに移行時のイベント
+	public void AnimEnter_Rainy ()
+	{
+		this.myMecanimAnimator.SetTrigger ("ChangeWeather");
+
+		this.myState = EtoriState.Idle;
+		this.mySSAnimator.Animation = this.RainySSAnimations [0];
+		this.mySSAnimator.PlayCount = 1;
+		this.mySSAnimator.AnimationFinished = (SsSprite Sprite) => {
+			this.myMecanimAnimator.SetTrigger("ChangeWeatherEnd");
+		};
+		this.mySSAnimator.Play ();
+
+	}
+
+	// Rainyに移行時のイベント
+	public void AnimEnter_Snowy ()
+	{
+		this.myMecanimAnimator.SetTrigger ("ChangeWeather");
+
+		this.myState = EtoriState.Idle;
+		this.mySSAnimator.Animation = this.SnowySSAnimations [0];
+		this.mySSAnimator.PlayCount = 1;
+		this.mySSAnimator.AnimationFinished = (SsSprite Sprite) => {
+			this.myMecanimAnimator.SetTrigger("ChangeWeatherEnd");
 		};
 		this.mySSAnimator.Play ();
 

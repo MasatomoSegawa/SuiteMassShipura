@@ -41,6 +41,7 @@ public class Musi : MonoBehaviour {
 		GetMusiEvent ();
 
 		Destroy (this.gameObject);
+
 	}
 
 	void OnTriggerEnter2D(Collider2D other){

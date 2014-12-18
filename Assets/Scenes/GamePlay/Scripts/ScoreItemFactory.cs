@@ -11,6 +11,9 @@ public class ScoreItemFactory : Singleton<ScoreItemFactory> {
 	// アイテムが落ちる速度
 	public float ItemSpeed;
 
+	// 虫が落ちる確率(1~10)
+	public float MusiRandomize = 1;
+
 	// ランダムに速度を付ける
 	[Range(0.0f, 10.0f)]
 	public float MaxRandomizeSpeed;
@@ -21,10 +24,16 @@ public class ScoreItemFactory : Singleton<ScoreItemFactory> {
 	// 
 	private float BonusTimer = 0.0f;
 
+
 	void Start(){
 
+		/*
 		string diffStr = PlayerPrefs.GetString ("Current_Difficulty");
-		Difficulty difficulty;
+
+		//debug
+		diffStr = "Easy";
+
+		Difficulty difficulty = Difficulty.Easy;
 		float ItemsSpeed, MaxRandomize = 0.0f, OkashiCoolTime;
 
 		switch (diffStr) {
@@ -56,15 +65,17 @@ public class ScoreItemFactory : Singleton<ScoreItemFactory> {
 			Debug.Log ("Error");
 			break;
 		}
+		*/
 
-		this.MaxRandomizeSpeed = MaxRandomize;
-		this.ItemSpeed = ItemSpeed;
+	}
+
+	void LevelChange(){
 
 	}
 
 	void Update(){
 
-
+		/*
 		if (GameModel.isFreeze == false) {
 			if (BonusTimer >= BonusTimeDuration) {
 				BonusTimer = 0.0f;
@@ -74,6 +85,7 @@ public class ScoreItemFactory : Singleton<ScoreItemFactory> {
 				BonusTimer += Time.deltaTime;
 			}
 		}
+		*/
 
 	}
 
@@ -84,7 +96,7 @@ public class ScoreItemFactory : Singleton<ScoreItemFactory> {
 	/// <param name="position">Position.</param>
 	public GameObject RandomInstantiate(Vector3 position){
 
-		if (Random.Range (1, 10) >= 7) {
+		if (Random.Range (1.0f, 10.0f) <= MusiRandomize) {
 			GameObject MusiClone = Instantiate (Mushi, position, Quaternion.identity) as GameObject;
 			MusiClone.GetComponent<Musi> ().Init (ItemSpeed + Random.Range(0.0f,MaxRandomizeSpeed));
 

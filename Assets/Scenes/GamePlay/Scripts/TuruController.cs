@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-public enum TuruState{
-	Idle,Eating,Close,OpenIdle,Open,
+public enum TuruState
+{
+	Idle,Eating,Close,OpenIdle,Open,Damage,
 }
 
-public class TuruController : MonoBehaviour {
-
+public class TuruController : MonoBehaviour
+{
 	//SpriteStudio用のアニメーター
 	/// 0 - Idle
 	/// 1 - Eating
@@ -16,31 +16,31 @@ public class TuruController : MonoBehaviour {
 	/// 4 - Open
 	public SsAnimation[] SSAnimations;
 	SsSprite mySSAnimator;
-
 	//Mecanim用のアニメーター
 	Animator myMecanimAnimator;
-
 	public GameObject ItemGetEffect;
-
 	public TuruState myState;
-
 	public Transform Hantei;
-
 	// 開閉速度.
 	public float OpenSpeed = 1.0f;
 
-	void Start(){
+	//Particle
+	public GameObject Smoke;
+
+	void Start ()
+	{
 
 		Init ();
 
 	}
 
-	void Update(){
+	void Update ()
+	{
 
 		//口が開いてたなら
 		if (myState == TuruState.Open || myState == TuruState.OpenIdle) {
 
-			Collider2D collision = Physics2D.OverlapCircle (Hantei.position,0.5f);
+			Collider2D collision = Physics2D.OverlapCircle (Hantei.position, 0.5f);
 
 			if (collision) {
 
@@ -48,7 +48,7 @@ public class TuruController : MonoBehaviour {
 				case "Musi":
 					collision.gameObject.GetComponent<Musi> ().End ();
 					this.myMecanimAnimator.SetTrigger ("StartEating");
-					SoundManager.Instance.PlaySE ("mogumogu");
+					SoundManager.Instance.PlaySE ("damage");
 					break;
 
 				case "Okashi":
@@ -71,7 +71,8 @@ public class TuruController : MonoBehaviour {
 
 	}
 
-	public void Init(){
+	public void Init ()
+	{
 
 		this.myMecanimAnimator = this.GetComponent<Animator> ();
 
@@ -85,9 +86,10 @@ public class TuruController : MonoBehaviour {
 	/// <summary>
 	/// 触手を強制的に引っ込ませる
 	/// </summary>
-	public void DestroyTuru(){
+	public void DestroyTuru ()
+	{
 
-		this.myMecanimAnimator.SetBool ("isOpen",false);
+		this.myMecanimAnimator.SetBool ("isOpen", false);
 		this.myMecanimAnimator.SetTrigger ("DestoryTuru");
 
 	}
@@ -95,18 +97,20 @@ public class TuruController : MonoBehaviour {
 	/// <summary>
 	/// Openキーが押された時
 	/// </summary>
-	public void InputOpenKey(){
-	
-		this.myMecanimAnimator.SetBool ("isOpen",true);
+	public void InputOpenKey ()
+	{
+		if(myState != TuruState.Damage)
+		this.myMecanimAnimator.SetBool ("isOpen", true);
 
 	}
 
 	/// <summary>
 	/// Openキーが押されていない時
 	/// </summary>
-	public void NotOpenKey(){
+	public void NotOpenKey ()
+	{
 
-		this.myMecanimAnimator.SetBool ("isOpen",false);
+		this.myMecanimAnimator.SetBool ("isOpen", false);
 
 	}
 
@@ -115,7 +119,8 @@ public class TuruController : MonoBehaviour {
 	/// <summary>
 	/// Idle状態に戻る時のイベント
 	/// </summary>
-	public void AnimEnter_Idle(){
+	public void AnimEnter_Idle ()
+	{
 
 		this.myState = TuruState.Idle;
 
@@ -128,7 +133,8 @@ public class TuruController : MonoBehaviour {
 	/// <summary>
 	/// 触手の口が開く時のイベント
 	/// </summary>
-	public void AnimEnter_Open(){
+	public void AnimEnter_Open ()
+	{
 
 		this.myState = TuruState.Open;
 
@@ -138,7 +144,7 @@ public class TuruController : MonoBehaviour {
 		this.mySSAnimator.Play ();
 
 		this.mySSAnimator.AnimationFinished = (SsSprite sprite) => {
-			this.myMecanimAnimator.SetTrigger("EndOpenAnimation");
+			this.myMecanimAnimator.SetTrigger ("EndOpenAnimation");
 		};
 
 	}
@@ -146,7 +152,8 @@ public class TuruController : MonoBehaviour {
 	/// <summary>
 	/// OpenIdle状態スタート時のイベント
 	/// </summary>
-	public void AnimEnter_OpenIdle(){
+	public void AnimEnter_OpenIdle ()
+	{
 
 		this.myState = TuruState.OpenIdle;
 
@@ -160,7 +167,8 @@ public class TuruController : MonoBehaviour {
 	/// <summary>
 	/// 触手の口が閉じる時のイベント
 	/// </summary>
-	public void AnimEnter_Close(){
+	public void AnimEnter_Close ()
+	{
 
 		this.myState = TuruState.Close;
 
@@ -169,7 +177,7 @@ public class TuruController : MonoBehaviour {
 		this.mySSAnimator.Play ();
 
 		this.mySSAnimator.AnimationFinished = (SsSprite sprite) => {
-			this.myMecanimAnimator.SetTrigger("EndCloseAnimation");
+			this.myMecanimAnimator.SetTrigger ("EndCloseAnimation");
 		};
 
 	}
@@ -177,7 +185,8 @@ public class TuruController : MonoBehaviour {
 	/// <summary>
 	/// お食事中のイベント
 	/// </summary>
-	public void AnimEnter_Eating(){
+	public void AnimEnter_Eating ()
+	{
 	
 		this.myState = TuruState.Eating;
 
@@ -187,9 +196,52 @@ public class TuruController : MonoBehaviour {
 		this.mySSAnimator.Play ();
 
 		this.mySSAnimator.AnimationFinished = (SsSprite sprite) => {
-			this.myMecanimAnimator.SetTrigger("EndEatingAnimation");
+			this.myMecanimAnimator.SetTrigger ("EndEatingAnimation");
 		};
 
 	}
-		
+
+	public void AnimEnter_Damage(){
+		this.myState = TuruState.Damage;
+
+		Smoke.particleSystem.Play ();
+
+		Debug.Log ("onDamage");
+	}
+
+	public void AnimEnd_Damage(){
+
+		Debug.Log ("DamageEnd");
+		Smoke.particleSystem.Stop ();
+		this.myState = TuruState.Idle;
+
+	}
+
+	public void OnHitThunder(){
+
+		if(myState == TuruState.Open || myState == TuruState.OpenIdle || myState == TuruState.Eating){
+			this.myMecanimAnimator.SetTrigger ("onDamage");
+			Debug.Log ("onDamage");
+		}
+
+	}
+
+	/*
+	void OnParticleCollision (GameObject obj)
+	{
+
+		Debug.Log ("mine: Thunder" + this.name[this.name.Length - 1]);
+		Debug.Log (obj.transform.parent.name);
+
+		if(obj.transform.parent.name == "Thunder" + this.name[this.name.Length - 1]){
+
+			if(myState == TuruState.Open || myState == TuruState.OpenIdle || myState == TuruState.Eating){
+				this.myMecanimAnimator.SetTrigger ("onDamage");
+				Debug.Log ("onDamage");
+			}
+
+		}
+	}
+	*/
+
 }

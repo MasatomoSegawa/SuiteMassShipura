@@ -14,10 +14,12 @@ public class EndGamePlay : State
 
 		//ランキング集計
 		int Score = GUIScore.Instance.CurrentScore;
-		int Chain = ComboManager.Instance.MaximumChain;
+		//int Chain = ComboManager.Instance.MaximumChain;
+
+		ScoreManager.Instance.Init (Score);
 
 		PlayerPrefs.SetInt ("Current_Score", Score);
-		PlayerPrefs.SetInt ("Current_Chain", Chain);
+		//PlayerPrefs.SetInt ("Current_Chain", Chain);
 
 		NextTime = Time.time + RateTime;
 

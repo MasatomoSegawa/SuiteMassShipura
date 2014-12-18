@@ -83,6 +83,7 @@ public class SoundManager : Singleton<SoundManager>
 	{
 
 		foreach (SoundSource ss in BGMs) {
+
 			if (ss.Name.Equals (name) == true) {
 				BGMSource.clip = ss.clip;
 				BGMSource.volume = volume.BGM;
@@ -114,7 +115,7 @@ public class SoundManager : Singleton<SoundManager>
 
 		foreach (SoundSource ss in SEs) {
 			if (ss.Name.Equals (name) == true) {
-
+				//Debug.Log (name);
 				foreach (AudioSource audiosource in SEsources) {
 					if (audiosource.isPlaying == false) {
 						audiosource.clip = ss.clip;

@@ -1,13 +1,15 @@
-﻿
+﻿using UnityEngine.UI;
 using UnityEngine;
 using System.Collections;
 
 public class StaminaGauge : Singleton<StaminaGauge> {
 
-	public Transform GaugePosition;
+	//public Transform GaugePosition;
+
+	public Slider StaminaBar;
 
 	/// ゲージのスプライト群
-	public SpriteRenderer spriteRenderer;
+	public Image image;
 	public Sprite NormalGauge;
 	public Sprite RecoveryGauge;
 	public Sprite Warn1Gauge;
@@ -16,7 +18,6 @@ public class StaminaGauge : Singleton<StaminaGauge> {
 	// えとりちゃんのスタミナ最大値
 	public float StaminaMaxValue = 100;
 
-	private float CurrentStaminaValue = 1;
 	private float GaugeMaxNum;
 
 	public float HealTimeDuration = 5.0f;
@@ -60,7 +61,7 @@ public class StaminaGauge : Singleton<StaminaGauge> {
 			newValue += -DeclineTuruDamage * EtoriController.Instance.CurrentExistTentaclsNum;
 			GaugeChange (newValue);
 
-			//Debug.Log (CurrentStaminaValue);
+			//Debug.Log (this.StaminaBar.value);
 		}
 
 	}
@@ -76,11 +77,8 @@ public class StaminaGauge : Singleton<StaminaGauge> {
 	/// </summary>
 	void Init(){
 
-		this.GaugeMaxNum = this.GaugePosition.localScale.x;
-
-		this.CurrentStaminaValue = this.StaminaMaxValue * this.InitValue / 100.0f;
-
-		this.SetGauge (this.CurrentStaminaValue);
+		this.StaminaBar.maxValue = this.StaminaMaxValue;
+		this.StaminaBar.value = InitValue;
 
 		this.GaugeZeroEvent += () => {
 			Debug.Log("Gauge Zero");
@@ -96,21 +94,17 @@ public class StaminaGauge : Singleton<StaminaGauge> {
 	/// ゲージのスケール調整
 	/// </summary>
 	void ScaleChange(){
-
-		float xScale = (this.CurrentStaminaValue / StaminaMaxValue) * (float)this.GaugeMaxNum;
-
-		this.GaugePosition.localScale = new Vector3 (xScale, this.GaugePosition.localScale.y,this.GaugePosition.localScale.z);
-
-		if (this.CurrentStaminaValue >=  this.StaminaMaxValue * 70.0f / 100.0f) {
-			this.spriteRenderer.sprite = NormalGauge;
-		} else if (this.StaminaMaxValue * 40.0f / 100.0f <= this.CurrentStaminaValue && this.CurrentStaminaValue <  this.StaminaMaxValue * 70.0f / 100.0f) {
-			this.spriteRenderer.sprite = Warn1Gauge;
-		} else if (0.0f <= this.CurrentStaminaValue && this.CurrentStaminaValue <  this.StaminaMaxValue * this.InitValue / 40.0f) {
-			this.spriteRenderer.sprite = Warn2Gauge;
+	
+		if (this.StaminaBar.value >=  this.StaminaMaxValue * 70.0f / 100.0f) {
+			image.sprite = NormalGauge;
+		} else if (this.StaminaMaxValue * 40.0f / 100.0f <= this.StaminaBar.value && this.StaminaBar.value <  this.StaminaMaxValue * 70.0f / 100.0f) {
+			image.sprite = Warn1Gauge;
+		} else if (0.0f <= this.StaminaBar.value && this.StaminaBar.value <  this.StaminaMaxValue * this.InitValue / 40.0f) {
+			image.sprite = Warn2Gauge;
 		}
 	
 		if (_isStaminaHeal == true) {
-			this.spriteRenderer.sprite = RecoveryGauge;
+			image.sprite = RecoveryGauge;
 		}
 
 	}
@@ -121,7 +115,9 @@ public class StaminaGauge : Singleton<StaminaGauge> {
 	/// <param name="value">Value.</param>
 	public void SetGauge(float value){
 
-		this.CurrentStaminaValue = Mathf.Clamp (value, 0.0f, StaminaMaxValue);
+		float temp = Mathf.Clamp (value, 0.0f, StaminaMaxValue);
+
+		this.StaminaBar.value = temp;
 
 		this.ScaleChange ();
 
@@ -132,19 +128,21 @@ public class StaminaGauge : Singleton<StaminaGauge> {
 	/// </summary>
 	public void GaugeChange(float value){
 
-		float newValue = CurrentStaminaValue + value;
+		float newValue = this.StaminaBar.value + value;
 
-		this.CurrentStaminaValue = Mathf.Clamp (newValue, 0.0f, StaminaMaxValue);
+		newValue = Mathf.Clamp (newValue, 0.0f, StaminaMaxValue);
+
+		this.StaminaBar.value = newValue;
 
 		this.ScaleChange ();
 
 		//疲労回復中じゃない　かつ　ゲージが０になったら
-		if (this._isStaminaHeal == false && this.CurrentStaminaValue <= 0.0f) {
+		if (this._isStaminaHeal == false && this.StaminaBar.value <= 0.0f) {
 			this.GaugeZero ();
 		}
 
 		//疲労回復中　かつ　ゲージがMAXになったら
-		if (this._isStaminaHeal == true && this.CurrentStaminaValue >= 100.0f) {
+		if (this._isStaminaHeal == true && this.StaminaBar.value >= 100.0f) {
 			this.HealEnd ();
 		}
 

@@ -11,7 +11,10 @@ public class TestInit : State
 		GameModel.isFreeze = true;
 
 		this.StartEffect = this.ResourceManagerInstance.InstantiateResourceWithName ("StartEffect");
+		Transform Scale = this.StartEffect.transform;
 
+		GameObject canvas = GameObject.Find ("GUICanvas");
+		this.StartEffect.transform.SetParent (canvas.transform,false);
 	}
 
 	public override void StateUpdate ()
@@ -25,7 +28,7 @@ public class TestInit : State
 
 	public override void StateDestroy ()
 	{
-		Debug.Log (this.ToString () + " Destroy!");
+		//Debug.Log (this.ToString () + " Destroy!");
 		GameModel.isFreeze = false;
 
 		Destroy (this.StartEffect);

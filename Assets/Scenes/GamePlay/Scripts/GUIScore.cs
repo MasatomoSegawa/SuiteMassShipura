@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GUIScore : Singleton<GUIScore> {
 
-	public TextMesh myScoreText;
+	public Text myScoreText;
 
 	private int currentScore = 0;
 
@@ -37,7 +38,7 @@ public class GUIScore : Singleton<GUIScore> {
 		int k = this.currentScore / 1000;
 		int s = this.currentScore % 1000;
 
-		this.myScoreText.text = k.ToString() + "," + s.ToString("D3");
+		this.myScoreText.text = k.ToString() + "," + s.ToString("D3") + "\ncal";
 
 	}
 

@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class ResultManager : MonoBehaviour {
 
+	public Text ScoreText;
+
 	// Use this for initialization
 	void Start () {
 
-		//		ResultObjectManager.Instance.Init ();
+		if(ScoreManager.Instance != null)
+			ScoreText.text = ScoreManager.Instance.Score.ToString();
 
 	}
 	
