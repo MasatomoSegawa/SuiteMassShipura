@@ -31,6 +31,8 @@ public class ScoreItem : MonoBehaviour {
 
 		///イベント登録
 		this.GetScoreItemEvent += GUIScore.Instance.AddScore;
+		this.GetScoreItemEvent += StaminaGauge.Instance.GetItem;
+
 		//this.GetScoreItemEvent += ComboManager.Instance.AddCombo;
 		//this.DestroyEvent += ComboManager.Instance.MissCombo;
 
@@ -43,7 +45,7 @@ public class ScoreItem : MonoBehaviour {
 		};
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 

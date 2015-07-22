@@ -11,7 +11,7 @@ public class Snow : Weather {
 		Turus = GameObject.FindGameObjectsWithTag ("Turu");
 
 		foreach (GameObject turu in Turus) {
-			turu.GetComponent<TuruController> ().OpenSpeed = 0.25f;
+			turu.GetComponent<TuruController> ().OpenSpeed = 0.5f;
 		}
 
 		EtoriController.Instance.AnimEnter_Snowy ();

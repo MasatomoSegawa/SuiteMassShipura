@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SpriteStudioCellMap version="1.00.01">
+	<name>umb</name>
+	<exportPath></exportPath>
+	<generator>SpriteStudio</generator>
+	<packed>0</packed>
+	<imagePath>えとり/umb.png</imagePath>
+	<pixelSize>1024 1024</pixelSize>
+	<overrideTexSettings>0</overrideTexSettings>
+	<wrapMode>clamp</wrapMode>
+	<filterMode>linear</filterMode>
+	<imagePathAtImport></imagePathAtImport>
+	<packInfoFilePath></packInfoFilePath>
+	<texPackSettings>
+		<maxSize>4096 4096</maxSize>
+		<forcePo2>1</forcePo2>
+		<forceSquare>0</forceSquare>
+		<margin>0</margin>
+		<padding>1</padding>
+	</texPackSettings>
+	<cells>
+		<cell>
+			<name>umb01</name>
+			<pos>0 2</pos>
+			<size>93 347</size>
+			<pivot>-0.00537634408101439 -0.393371760845184</pivot>
+			<rotated>0</rotated>
+			<orgImageName></orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>umb_hand</name>
+			<pos>4 358</pos>
+			<size>66 427</size>
+			<pivot>0.30303031206131 -0.38290399312973</pivot>
+			<rotated>0</rotated>
+			<orgImageName></orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>umb03</name>
+			<pos>97 0</pos>
+			<size>523 219</size>
+			<pivot>-0.0181644354015589 0.353881269693375</pivot>
+			<rotated>0</rotated>
+			<orgImageName></orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>umb04</name>
+			<pos>96 358</pos>
+			<size>523 217</size>
+			<pivot>-0.01625238917768 0.292626738548279</pivot>
+			<rotated>0</rotated>
+			<orgImageName></orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>grove</name>
+			<pos>177 666</pos>
+			<size>49 55</size>
+			<pivot>-0.0714285746216774 -0.209090903401375</pivot>
+			<rotated>0</rotated>
+			<orgImageName></orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>NewCell</name>
+			<pos>116 221</pos>
+			<size>483 137</size>
+			<pivot>-0.0217391308397055 0.237226277589798</pivot>
+			<rotated>0</rotated>
+			<orgImageName></orgImageName>
+			<posStable>0</posStable>
+		</cell>
+		<cell>
+			<name>ニット帽</name>
+			<pos>639 659</pos>
+			<size>331 218</size>
+			<pivot>0.00151057401672006 0</pivot>
+			<rotated>0</rotated>
+			<orgImageName></orgImageName>
+			<posStable>0</posStable>
+		</cell>
+	</cells>
+</SpriteStudioCellMap>

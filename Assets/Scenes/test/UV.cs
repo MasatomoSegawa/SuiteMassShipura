@@ -12,6 +12,6 @@ public class UV : MonoBehaviour {
 	void Update () {
 	
 
-		this.renderer.material.mainTextureOffset = new Vector2 (- Time.time * 0.25f,0.0f);
+		this.GetComponent<Renderer>().material.mainTextureOffset = new Vector2 (- Time.time * 0.25f,0.0f);
 	}
 }

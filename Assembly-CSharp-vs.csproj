@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_0;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -97,6 +97,7 @@
      <Compile Include="Assets\Scenes\GamePlay\Scripts\GUIScore.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\GUITimer.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Gauge.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\Leaves.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\LevelLoader.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Musi.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Rain.cs" />
@@ -113,10 +114,12 @@
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TestGamePlay.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TestInit.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Thunder.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\ThunderLevelLoader.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\ThunderReceiver.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\TuruController.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\Weather.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\WeatherManager.cs" />
+     <Compile Include="Assets\Scenes\GamePlay\Scripts\WeatherParticle.cs" />
      <Compile Include="Assets\Scenes\GamePlay\Scripts\collisionTest.cs" />
      <Compile Include="Assets\Scenes\KeyConfig\KeyConfigManager.cs" />
      <Compile Include="Assets\Scenes\NewTitle\Scripts\FadeButtonManager.cs" />
@@ -159,7 +162,6 @@
      <None Include="Assets\SpriteStudio\Shaders\_SsMixColorAddAlpha.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
-     <None Include="Assets\New Folder\00_KY_FX pack2\prefab\01_shot\00_ReadMe.txt" />
      <None Include="Assets\SpriteStudio\Shaders\_SsMixColorSubAlphaMulMatCol.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsMixColorAddAlphaMulMatCol.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsAddColorAddAlpha.shader" />
@@ -223,7 +225,6 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\SpriteStudio\Shaders\SsUnifiedShaderTemplate.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
-     <None Include="Assets\New Folder\Elementals\!Readme.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\SpriteStudio\Shaders\_SsNonColorMixAlpha.shader" />
      <None Include="Assets\SpriteStudio\Documents\English\sample.txt" />
@@ -292,7 +293,7 @@
  <HintPath>/Users/masatomosegawa/Unity/SuiteMassShipra/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

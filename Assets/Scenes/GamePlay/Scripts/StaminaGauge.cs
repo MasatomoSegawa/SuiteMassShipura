@@ -20,8 +20,6 @@ public class StaminaGauge : Singleton<StaminaGauge> {
 
 	private float GaugeMaxNum;
 
-	public float HealTimeDuration = 5.0f;
-
 	//スタミナゲージ回復中かどうか
 	private bool _isStaminaHeal = false;
 
@@ -31,6 +29,8 @@ public class StaminaGauge : Singleton<StaminaGauge> {
 	public float DeclineTimeDamage = 0.001f;
 	[Header("虫を取ったことによるダメージ")]
 	public float DeclineMusiDamage = 0.1f;
+	[Header("アイテムを取ったことによる回復値")]
+	public float HealItemValue = 0.1f;
 
 	[Range(0,100)]
 	public int InitValue = 0;
@@ -69,6 +69,12 @@ public class StaminaGauge : Singleton<StaminaGauge> {
 	public void GetMusi(){
 
 		GaugeChange (-DeclineMusiDamage);
+
+	}
+
+	public void GetItem(int Score){
+
+		GaugeChange (HealItemValue);
 
 	}
 

@@ -110,6 +110,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: ChangeWeatherFlag
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -140,6 +146,10 @@ Transition:
     m_ExitTime: .899999976
   - m_ConditionMode: 1
     m_ConditionEvent: isIdle
+    m_EventTreshold: 0
+    m_ExitTime: .899999976
+  - m_ConditionMode: 2
+    m_ConditionEvent: ChangeWeatherFlag
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -757,10 +767,6 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110260156}
-      second:
-      - {fileID: 110140330}
-    data:
       first: {fileID: 0}
       second:
       - {fileID: 110100000}
@@ -807,6 +813,10 @@ StateMachine:
       second:
       - {fileID: 110115823}
       - {fileID: 110195189}
+    data:
+      first: {fileID: 110260156}
+      second:
+      - {fileID: 110140330}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -24, y: 60, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

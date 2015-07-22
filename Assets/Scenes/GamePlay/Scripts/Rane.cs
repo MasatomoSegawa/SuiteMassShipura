@@ -7,7 +7,13 @@ public class Rane : MonoBehaviour {
 			
 	public void FallOkashi(){
 
-		ScoreItemFactory.Instance.RandomInstantiate (SpawnPoint.position);
+		ScoreItemFactory.Instance.OkashiInstantiate (SpawnPoint.position);
+
+	}
+
+	public void FallMusi(){
+	
+		ScoreItemFactory.Instance.MusiInstantiate (SpawnPoint.position);
 
 	}
 		

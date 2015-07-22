@@ -57,7 +57,7 @@ public class AddStateWindow : EditorWindow
 
 		GameObject obj = new GameObject (StateName);
 
-		if (obj.AddComponent (StateName) != null) {
+		if (UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent (obj, "Assets/New Folder/BaseGamePack/Editor/AddStateWindow.cs (60,7)", StateName) != null) {
 
 			PrefabUtility.CreatePrefab ("Assets" + "/" + StateName + ".prefab", obj);
 			AssetDatabase.Refresh (ImportAssetOptions.ImportRecursive);

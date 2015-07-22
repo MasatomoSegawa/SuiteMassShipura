@@ -20,7 +20,7 @@ public class CameraRange : MonoBehaviour {
 	
 	void OnDrawGizmos()
 	{
-		Camera targetCamera = camera;
+		Camera targetCamera = GetComponent<Camera>();
 		depth = -targetCamera.transform.localPosition.z;
 		
 		Vector3 forwardPosition = targetCamera.transform.forward * depth;
@@ -56,7 +56,7 @@ public class CameraRange : MonoBehaviour {
 	
 	void OnDrawGizmosSelected()
 	{
-		Camera targetCamera = camera;
+		Camera targetCamera = GetComponent<Camera>();
 		depth = -targetCamera.transform.localPosition.z;
 		
 		Vector3 leftcenter = targetCamera.ViewportToWorldPoint(new Vector3(1, 0.5f, forwardPosition.z));

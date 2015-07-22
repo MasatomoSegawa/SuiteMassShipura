@@ -204,7 +204,7 @@ public class TuruController : MonoBehaviour
 	public void AnimEnter_Damage(){
 		this.myState = TuruState.Damage;
 
-		Smoke.particleSystem.Play ();
+		Smoke.GetComponent<ParticleSystem>().Play ();
 
 		Debug.Log ("onDamage");
 	}
@@ -212,7 +212,7 @@ public class TuruController : MonoBehaviour
 	public void AnimEnd_Damage(){
 
 		Debug.Log ("DamageEnd");
-		Smoke.particleSystem.Stop ();
+		Smoke.GetComponent<ParticleSystem>().Stop ();
 		this.myState = TuruState.Idle;
 
 	}

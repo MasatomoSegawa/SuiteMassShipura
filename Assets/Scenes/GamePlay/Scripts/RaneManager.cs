@@ -3,74 +3,38 @@ using System.Collections;
 
 public class RaneManager : Singleton<RaneManager> {
 
-	//お菓子を生成するレーン
+	// お菓子を生成するレーン
 	public Rane[] Ranes;
 
-	//ボーナスアイテムを生成するレーン
+	// ボーナスアイテムを生成するレーン
 	public BonusRane bonusRane;
 
-	//雷
+	// 雷
 	public GameObject Thunder;
 
 	public float BonusOkashiFallCoolTime = 0.3f;
 	public float OkashiFallCoolTime = 0.5f;
-	private float CurrentTime;
+
+	private float CurrentTime = 0.0f;
 	private float CurrentCoolTime;
+
+	// 虫が落ちるクールタイム
+	public float MusiCoolTime;
+	public float CuruentMusiTime = 0.0f;
 
 	void Start(){
 
 		this.CurrentCoolTime = OkashiFallCoolTime;
-
-		Level ();
-
-	}
-
-	void Level(){
-
-		/*
-		string diffStr = PlayerPrefs.GetString ("Current_Difficulty");
-		Difficulty difficulty;
-		float ItemsSpeed = 0.0f, MaxRandomizeSpeed = 0.0f, OkashiCoolTime = 0.0f;
-
-		diffStr = "Easy";
-
-		switch (diffStr) {
-		case "Easy":
-			ItemsSpeed = 1.0f;
-			MaxRandomizeSpeed = 2.0f;
-			OkashiCoolTime = 0.4f;
-			break;
-
-		case "Normal":
-			ItemsSpeed = 1.5f;
-			MaxRandomizeSpeed = 3.0f;
-			OkashiCoolTime = 0.35f;
-			break;
-
-		case "Hard":
-			ItemsSpeed = 1.8f;
-			MaxRandomizeSpeed = 4.0f;
-			OkashiCoolTime = 0.3f;
-			break;
-
-		case "VeryHard":
-			ItemsSpeed = 2.0f;
-			MaxRandomizeSpeed = 5.0f;
-			OkashiCoolTime = 0.25f;
-			break;
-
-		default:
-			Debug.Log ("Error");
-			break;
-		}
-
-		this.OkashiFallCoolTime = OkashiCoolTime;
-	*/
+		this.MusiCoolTime = 5.0f;
 
 	}
 
-	void LevelChange(){
-	
+	public void SetLevel(float OkashiFallCoolTime, float MusiCoolTime){
+
+		this.CurrentCoolTime = OkashiFallCoolTime;
+		this.MusiCoolTime = MusiCoolTime;
+
+		this.CuruentMusiTime = Time.time + MusiCoolTime;
 
 	}
 
@@ -80,12 +44,24 @@ public class RaneManager : Singleton<RaneManager> {
 		//お菓子アイテムをランダムに落とす
 		if (GameModel.isFreeze == false) {
 
+			//お菓子
 			if (CurrentTime <= Time.time) {
 				CurrentTime = Time.time + CurrentCoolTime;
 				this.FallRandomOkasi ();
 			}
 
+			if (CuruentMusiTime <= Time.time) {
+				CuruentMusiTime = Time.time + MusiCoolTime;
+				this.FallRandomMusi ();
+			}
+
 		}
+
+	}
+
+	void FallRandomMusi(){
+
+		Ranes [Random.Range (0, Ranes.Length)].FallMusi ();
 
 	}
 

@@ -99,7 +99,9 @@ public class WeatherManager : Singleton<WeatherManager>
 
 		this.NextWeather = state;
 		this.CurrentWeatherScript.WeatherFadeOut ();
-		this.BackgroundWeatherScript.SetWeather (state);
+
+		if (state == WeatherState.Rain || state == WeatherState.Snow || state == WeatherState.Sunny)
+			this.BackgroundWeatherScript.SetWeather (state);
 
 	}
 

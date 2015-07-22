@@ -1166,7 +1166,7 @@ public class SsSprite : MonoBehaviour
 		_mesh.RecalculateNormals();
 		// get latest bounds
 		// _mesh.bounds are not applied transform of this gameObject so that use renderer's.
-		_bounds = renderer.bounds;
+		_bounds = GetComponent<Renderer>().bounds;
 #if false
 		// even Z position to compare the bound's intersection with another sprite
 		Vector3 v = _bounds.center;

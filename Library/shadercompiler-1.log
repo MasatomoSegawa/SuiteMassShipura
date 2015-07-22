@@ -1,21 +1,13 @@
 Base path: /Applications/Unity/Unity.app/Contents
-Pipe name: \\.\pipe\UnityShaderCompiler-1--1596939820
+Pipe name: \\.\pipe\UnityShaderCompiler-1--1595285036
 Cmd: getPlatforms
+Cmd: compileSnippet
+  api=0 type=0 insize=1623 outsize=652 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1623 outsize=496 kw= ok=1
 Cmd: compileSnippet
   error: 2 plat 4 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)
   api=4 type=0 insize=1623 outsize=0 kw= ok=0
-Cmd: compileSnippet
-  error: 2 plat 8 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)
-  api=8 type=0 insize=1623 outsize=0 kw= ok=0
-Cmd: compileSnippet
-  error: 2 plat 4 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)
-  api=4 type=1 insize=1623 outsize=0 kw= ok=0
-Cmd: compileSnippet
-  error: 2 plat 8 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)
-  api=8 type=1 insize=1623 outsize=0 kw= ok=0
-Cmd: compileSnippet
-  error: 2 plat 8 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)
-  api=8 type=0 insize=1623 outsize=0 kw= ok=0
 Cmd: compileSnippet
   error: 2 plat 4 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)
   api=4 type=1 insize=1623 outsize=0 kw= ok=0

@@ -8,7 +8,9 @@ public class TestGamePlay : State
 	private float NextTime = 0.0f;
 	private float CoolTime = 0.0f;
 
-	private WeatherState NextWeather;
+	private WeatherState OldWeather;
+
+	GameLevelInfo gameLevelInfo;
 
 	public override void StateStart ()
 	{
@@ -22,7 +24,6 @@ public class TestGamePlay : State
 
 		this.levelLoader = GameObject.FindGameObjectWithTag ("LevelLoader").GetComponent<LevelLoader>();
 	
-		NextWeather = WeatherManager.Instance.InitWeather;
 		NextTime = CoolTime + Time.time;
 	}
 
@@ -30,19 +31,34 @@ public class TestGamePlay : State
 	{
 	
 		if (Time.time >= NextTime) {
-			this.levelLoader.ReadLine ();
+			gameLevelInfo = this.levelLoader.ReadLine ();
 
-			CoolTime = this.levelLoader.NextLoadTime;
+			if (gameLevelInfo != null) {
+		
+				LevelWeather ();
+				LevelItem ();
 
-			if (NextWeather != this.levelLoader.Weather) {
-				NextWeather = this.levelLoader.Weather;
-				WeatherManager.Instance.ChangeWeather (this.NextWeather);
+				NextTime = gameLevelInfo.NextLoadTime + Time.time;
 			}
-
-			NextTime = CoolTime + Time.time;
 		}
 
 	
+	}
+
+	void LevelWeather(){
+
+		if (OldWeather != gameLevelInfo.Weather) {
+			OldWeather = this.gameLevelInfo.Weather;
+			WeatherManager.Instance.ChangeWeather (gameLevelInfo.Weather);
+		}
+
+	}
+
+	void LevelItem(){
+
+		RaneManager.Instance.SetLevel (gameLevelInfo.OkashiFallDuration, gameLevelInfo.MusiFallDuration);
+		ScoreItemFactory.Instance.SetLevel (gameLevelInfo.ItemSpeed, gameLevelInfo.MaxRandamizeSpeed,gameLevelInfo.MusiSpeed);
+
 	}
 
 	public override void StateDestroy ()
